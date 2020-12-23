@@ -8,13 +8,34 @@ body{
 }
 
 footer{
-	background-color: #BE3144;
+	background-color: #2C3E50;
 	margin-top: 1000px;
 	bottom: 0px;
 	padding: 10px;
 	text-align: center;
-	color: #bdc3c7;
+	color: #ffffff;
+
 }
+.Copyright
+{
+	background-color:#1D2935 ;
+	 padding:10px;
+	 color: white;
+	 text-align: center;
+}	
+div.footer_title{
+	font-size: x-large;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+
+}
+div.subfooter 
+{
+		padding-top: 10px;
+		padding-bottom: 20px;
+}
+
 .d-block{
 	max-height: 100vh;
 }
