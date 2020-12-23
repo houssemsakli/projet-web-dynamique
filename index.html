@@ -5,58 +5,64 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>   
-    <script         src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>     
-    <link rel="stylesheet" href="style.css" type="text/css"> 
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	
+  
+    <script src="js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="js/popper.min.js" ></script><!-- BOOTSTRAP -->  
+	<script src="js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- BOOTSTRAP -->
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"><!-- UBENTO GOOGLE FONT-->
+	<script src="js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
+	<link rel="stylesheet" href="css/style.css" type="text/css"> 
 </head>
 
 <body>
+	<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
 	<header>
-	<div class="fixed-top">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
-			<div class="container">
-	 		<a class="navbar-brand" href="#">Titre</a>
-	  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-	  		<span class="navbar-toggler-icon"></span>
-	 		</button>
-	  		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-	    		<ul class="navbar-nav col-md-9">
-	      			<li class="nav-item active">
-	        			<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
-	      			</li>
-	      			<li class="nav-item dropdown">
-	        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          			Articles
-	        			</a>
-	        			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	         		 		<a class="dropdown-item" href="articleshomme.html">Homme</a>
-	          				<a class="dropdown-item" href="articlesfemme.html">Femme</a>
-	          				<a class="dropdown-item" href="articlesenfant.html">Enfant</a>
-	       				</div>
-	      			</li>
-	      			<li class="nav-item" >
-	       				<a class="nav-link" href="contact.html" >Contactez-Nous</a>
-	      			</li>     			      			
-	    		</ul>
-	    		<ul class="col-md-3 navbar-nav" >
-	      			<li class="nav-item" >
-	       				<a class="nav-link" href="inscription.html" >Inscription</a>
-	      			</li>
-	      			<li class="nav-item" >
-	       				<a class="nav-link" href="connexion.html" >Connexion</a>
-	      			</li>   
-	      		</ul>    	
-	  		</div>
-  		</div>
-		</nav>
-	</div>
+		<div class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
+				<div class="container">
+				<a class="navbar-brand" href="#">Titre</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav col-md-9">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Articles
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="articleshomme.html">Homme</a>
+								<a class="dropdown-item" href="articlesfemme.html">Femme</a>
+								<a class="dropdown-item" href="articlesenfant.html">Enfant</a>
+							</div>
+						</li>
+						<li class="nav-item" >
+							<a class="nav-link" href="contact.html" >Contactez-Nous</a>
+						</li>     			      			
+					</ul>
+					<ul class="col-md-3 navbar-nav" >
+						<li class="nav-item" >
+							<a class="nav-link" href="inscription.html" >Inscription</a>
+						</li>
+						<li class="nav-item" >
+							<a class="nav-link" href="connexion.html" >Connexion</a>
+						</li>   
+					</ul>    	
+				</div>
+			</div>
+			</nav>
+		</div>
 	</header>
-
+	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
+	
+	<!-- -------------------------------------------- CAROUSEL BEGIN ----------------------------------------------   -->
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 	  <ol class="carousel-indicators">
 	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -66,13 +72,13 @@
 	  <div class="carousel-inner">
 	  	<div class="overlay"></div>
 		    <div class="carousel-item active">
-		      <img class="d-block w-100" src="images/index1.png" alt="First slide">
+		      <img class="imheight d-block w-100" src="images/index1.png" alt="First slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="images/index2.png" alt="Second slide">
+		      <img class="imheight d-block w-100" src="images/index2.png" alt="Second slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="images/index3.png" alt="Third slide">
+		      <img class="imheight d-block w-100" src="images/index3.png" alt="Third slide">
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -84,51 +90,57 @@
 		    <span class="sr-only">Next</span>
 		  </a>
 	</div>
+<!-- -------------------------------------------- CAROUSEL END ----------------------------------------------   -->
 
+
+
+
+<!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
 	<footer >
-		<div class="container">
-		<div class="row">
-			<div  class="col-md">
-				<div class="footer_title">
-					localisation
+		<div class="topsidefooter container">
+			<div class="row">
+				<div  class="col-md-6">
+					<div class="footer_title">
+						localisation
+					</div><br>
+					<div class="subfooter" >
+						<i class="fas fa-map-marker-alt">&nbsp;</i>Stah Jeber ,<br>
+						Monastir, Tunisie<br>
+						<i class="fas fa-phone"></i> &nbsp;+216 12 345 678<br>
+						<i class="fas fa-envelope"></i> &nbsp; <u>contact@titre.com</u>
+					</div>
 				</div>
-				<div class="subfooter" >
-					Stah Jeber,<br>
-				Monastir, Tunisie
-				+216 12 345 678<br><u>contact@titre.com</u>
-				</div>
+				<div class="col-md-6">
+					<div class="footer_title">
+						développé par
+					</div ><br>
+					<div class="subfooter d-flex justify-content-center" >
+						<table >
+							<tr>
+								<td style="padding-right:15px;text-align: right;">Housssem</td>
+								<td style="padding-left:15px;text-align: left;" >Sakli</td>
+							</tr>
+							<tr>
+								<td style="padding-right:15px;text-align: right;">Ramez</td>
+								<td style="padding-left:15px;text-align: left;">Zormati</td>
+							</tr>
+							<tr>
+								<td  style="padding-right:15px;text-align: right;">Zine din</td>
+								<td style="padding-left:15px;text-align: left;">Younsi</td>
+							</tr>
+							<tr>
+								<td  style="padding-right:15px;text-align: right;">Youssef</td>
+								<td style="padding-left:15px;text-align: left;">Jobrane</td>
+							</tr>
+						</table>
+					</div>
+				</div>		
 			</div>
-			<div class="col-md">
-				<div class="footer_title">
-					développé par
-				</div >
-				<div class="subfooter d-flex justify-content-center" >
-					<table >
-						<tr>
-							<td style="padding-right:15px;text-align: right;">Housssem</td>
-							<td style="padding-left:15px;text-align: left;" >Sakli</td>
-						</tr>
-						<tr>
-							<td style="padding-right:15px;text-align: right;">Ramez</td>
-							<td style="padding-left:15px;text-align: left;">Zormati</td>
-						</tr>
-						<tr>
-							<td  style="padding-right:15px;text-align: right;">Zine din</td>
-							<td style="padding-left:15px;text-align: left;">Younsi</td>
-						</tr>
-						<tr>
-							<td  style="padding-right:15px;text-align: right;">Youssef</td>
-							<td style="padding-left:15px;text-align: left;">Jobrane</td>
-						</tr>
-					</table>
-				</div>
-			</div>		
 		</div>
-	</div>
-	
+		<div class="Copyright ">
+			© Copyright 2020-2021
+		</div>
 	</footer>
-	<div class="Copyright ">
-		© Copyright 2020-2021
-	</div>
+	<!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 </body>
 </html>
