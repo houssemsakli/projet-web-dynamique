@@ -1,10 +1,19 @@
 
+
 body{
 	padding: 0;
 	margin: 0;
 	background-color: #95a5a6;
 	font-family: 'Ubuntu', sans-serif;
 }
+
+.redcolor {
+	color : #BE3144; 
+	font-size: 30px;
+	font-weight:bold;
+	
+}
+
 /*-------------------------- CAROUSEL --------------------------*/
 .imheight{
 	max-height: 100vh;
@@ -24,9 +33,28 @@ body{
 .carousel-control-prev,.carousel-control-next{
 	z-index: 5;
 }
+
 /*-------------------------- ****** --------------------------*/
+/*-------------------------- nouveautés  --------------------------*/
+.nouvsection{
+	background-color: rgba(255,255,255,0.8);
+	height: 600px;
+}
+.nouv-title-style{
+	font-size: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color : #343a40 ;
+}
+.box{
+	height:400px;
+	background-color: rgba(0,0,0,0.3);
+	border-radius: 5px;
+	margin : 5px;
+	width: 300px;
+}
 
-
+/*-------------------------- ****** --------------------------*/
 /*-------------------------- FOOTER --------------------------*/
 .topsidefooter{
 	padding-top: 40px;
@@ -46,7 +74,7 @@ div.subfooter
 }
 footer{
 	background-color: #2C3E50;
-	margin-top: 1000px;
+
 	bottom: 0px;
 	text-align: center;
 	color: #ffffff;
