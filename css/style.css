@@ -13,6 +13,12 @@ body{
 	font-weight:bold;
 	
 }
+.navbar-brand img
+{
+	margin-top:-12px;
+	width: 100px;
+}
+
 /*-------------------------- CAROUSEL --------------------------*/
 .carousel-inner h2
 { 
