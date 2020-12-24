@@ -1,0 +1,35 @@
+.form-title-style{
+    padding-top :25px;
+}
+.space{
+    height: 23px;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.box-connexion{
+    background-color: white;
+    width : 500px;
+    height: 330px;
+    color : black;
+}
+.formsection {
+    height: 550px;
+    padding-top: 0px;
+    background-color: rgb(230,230,230);
+}
+.btn-submit{
+    background-color: #BE3144;
+    border-color: #BE3144;
+    border-radius: 5px;
+    color : white  ; 
+    border :#BE3144 solid ;  
+    height: 50px;
+    font-size: 18px;
+}
+.btn-submit:hover{
+    background-color: #831f2c;
+    border-color: #831f2c;
+}
