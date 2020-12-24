@@ -20,7 +20,7 @@ body{
 .carousel-inner h2
 { 
     position: absolute;
-    font-size: 70px;
+    font-size: 60px;
 	z-index: 5;
 	text-transform: uppercase;
     color: #FFFFFF;
