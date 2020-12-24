@@ -17,6 +17,27 @@ body{
 
 
 /*-------------------------- CAROUSEL --------------------------*/
+.carousel-inner h2
+{ 
+    position: absolute;
+    font-size: 70px;
+	z-index: 5;
+	text-transform: uppercase;
+    color: #FFFFFF;
+    max-width: 900px;
+    line-height: inherit;
+    margin: 70px;font-style: initial;
+}
+.carousel-inner h2 span
+{
+    background-color: #BE3144;
+    color: white;
+    height:20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+
+}
 .imheight{
 	max-height: 100vh;
 }
@@ -34,6 +55,12 @@ body{
 }
 .carousel-control-prev,.carousel-control-next{
 	z-index: 5;
+}
+.carousel-inner
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 /*-------------------------- ****** --------------------------*/
