@@ -22,10 +22,17 @@
 }
 .btn-submit{
     background-color: #BE3144;
-    border-color: #BE3144;
+    border: #BE3144 solid;
     border-radius: 5px;
     color : white  ; 
-    border :#BE3144 solid ;  
+    height: 50px;
+    font-size: 18px;
+}
+.btn-submit-inscription {
+    background-color: grey;
+    border: grey solid;
+    border-radius: 5px;
+    color : white  ; 
     height: 50px;
     font-size: 18px;
 }
