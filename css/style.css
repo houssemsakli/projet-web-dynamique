@@ -160,6 +160,57 @@ div.footer_title{
 	letter-spacing: 10px;
 
 }
+.social_media i.fa-twitter:hover
+{
+	color:#fdfdfd;
+    font-weight: 400;
+	padding-top: 18px;
+	margin-top: 30;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 2px solid #50ABF1;
+	background-color: #50ABF1;
+}
+.social_media i.fa-facebook-f:hover
+{
+	color:#18ACFE;
+    font-weight: 400;
+	padding-top: 18px;
+	margin-top: 30;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 0px solid white;
+	background-color: white;
+}
+.social_media i.fa-instagram:hover
+{
+    font-weight: 400;
+	padding-top: 18px;
+	margin-top: 32;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border:2px solid white;
+	background: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
+}
+.social_media i
+{
+	color: white;
+    font-weight: 400;
+	padding-top: 18px;
+	margin-top: 30;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+div.subfooter.row
+{
+	padding-top: 50px;
+}
 div.subfooter 
 {
 		padding-top: 10px;
