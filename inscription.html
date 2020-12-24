@@ -20,6 +20,8 @@
 	<script src="js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
     <link rel="stylesheet" href="css/style.css" type="text/css"> 
     <link rel="stylesheet" href="css/connexion_style.css" type="text/css"> 
+	<script src="js/verifInscri.js">
+	</script>
 </head>
 
 <body>
@@ -77,13 +79,13 @@
             <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " style="height: 700px;">
                 <div class="container">
                     <div class="space"></div>
-                    <form  action="" method="post" class="form-group"><br>
+                    <form  action="" method="post" class="form-group" name="frm"><br>
                         <div class="space"></div>
-                        <input type="text"  placeholder="Nom"  class="form-control " ><br>
-                        <input type="text" placeholder="Prénom" class="form-control " ><br>
-                        <input type="mail"  placeholder="E-mail"  class="form-control " ><br>
-                        <input type="password" placeholder="Mot de passe" class="form-control " ><br>
-                        <input type="password" placeholder="Confirmer le mot de passe" class="form-control" ><br>
+                        <input type="text"  placeholder="Nom"  class="form-control " id="nom"><br>
+                        <input type="text" placeholder="Prénom" class="form-control " id="prenom"><br>
+                        <input type="mail"  placeholder="E-mail"  class="form-control " id="email"><br>
+                        <input type="password" placeholder="Mot de passe" class="form-control " id="mdp"><br>
+                        <input type="password" placeholder="Confirmer le mot de passe" class="form-control" id="mdp2"><br>
                     
                         <div class="row form-check" style="text-align: left;  width : 500px ">
                             <span class="col-md-6" style="color : rgb(116, 115, 115) ;font-size: 18px; font-family:  sans-serif;font-weight: 900;margin-left: -20px;" >
@@ -98,9 +100,9 @@
                                 Homme
                             </label>
                         </div><br>
-                        <textarea class="form-control" placeholder="Adresse" rows="3"></textarea>
+                        <textarea class="form-control" placeholder="Adresse" rows="3"id="adr"></textarea>
                         <br><br>
-                        <input class="btn-submit" type="submit" value="Inscription">
+                        <input class="btn-submit" type="submit" value="Inscription" onclick="Verifier();">
                     </form>
                 </div>
             </div>
