@@ -60,7 +60,7 @@
 								<a class="nav-link" href="../inscription.html" >Inscription</a>
 							</li>
 							<li class="nav-item " >
-								<a class="nav-link" href="../connexion.html" >Connexion</a>
+								<a class="nav-link" href="../php/connexion.php" >Connexion</a>
 							</li>   
 						</ul>    	
 					</div>
@@ -96,7 +96,7 @@
     MySQLi_query($con,$req);
     
     if (mysqli_affected_rows($con)<0){
-        echo( '<div style="margin-top: 50%;"><div class="alert alert-danger" >Email existe déja</div>');
+        echo('<div style="margin-top: 50%;"><div class="alert alert-danger" >Email existe déja</div>');
         echo('<button onclick="window.location.href=`http://localhost/p/inscription.html`;" class="btn btn-outline-dark btn-lg btn-block">Revenir</button></div>');
     }else{
         echo( '<div class="alert alert-success" style="margin-top: 50%;">Inscription terminée avec succès</div>');

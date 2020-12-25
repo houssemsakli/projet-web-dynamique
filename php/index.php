@@ -77,7 +77,7 @@
                                 <a class="nav-link" href="../inscription.html" >Inscription</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link" href="../connexion.html" >Connexion</a>
+                                <a class="nav-link" href="../php/connexion.php" >Connexion</a>
                             </li>
                 <?php }?>  
 						</ul>    	
