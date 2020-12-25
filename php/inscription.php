@@ -99,7 +99,7 @@
         echo( '<div style="margin-top: 50%;"><div class="alert alert-danger" >Email existe déja</div>');
         echo('<button onclick="window.location.href=`http://localhost/p/inscription.html`;" class="btn btn-outline-dark btn-lg btn-block">Revenir</button></div>');
     }else{
-        echo( '<div class="alert alert-success" style="margin-top: 50%;>Inscription terminée avec succès</div>');
+        echo( '<div class="alert alert-success" style="margin-top: 50%;">Inscription terminée avec succès</div>');
     }
 ?>                      
 
