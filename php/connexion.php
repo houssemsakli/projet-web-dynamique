@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/connexioninscri_style.css" type="text/css"> 
 </head>
 
-<body>
+<body onload="increaseHeight()">
 	<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
 	<header>
 		
@@ -58,7 +58,7 @@
 								<a class="nav-link" href="../inscription.html" >Inscription</a>
 							</li>
 							<li class="nav-item active" >
-								<a class="nav-link" href="../connexion.html" >Connexion</a>
+                                <a class="nav-link" href="../php/connexion.php" >Connexion</a>
 							</li>   
 						</ul>    	
 					</div>
@@ -66,48 +66,56 @@
 			</nav>
 		</div>
 	</header>
-	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
+<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 	
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
-<div class=" formsection">
+<div class="formsection" id="formsection">
 	<div class="container ">
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >Connectez-Vous</div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " style="height : 360px;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 300px;">
                 <div class="container">
                     <div class="space"></div>
-                    <div class="alert alert-danger ">
+                    
 <?php 
-
     $con = MySQLi_connect("localhost","root","") ;
     MySQLi_select_db($con,"bincoDb") ;
 
-    $email = $_POST['email'];
-    $mdp = $_POST['mdp'];
+
+    if(isset($_POST["email"]))
+    {
+        $email = $_POST['email'];
+        $mdp = $_POST['mdp'];
 
 
-    $req = "select * from compte where email='$email' ";
-    
-    $res = MySQLi_query($con,$req);
-    $e=mysqli_fetch_array($res);
-    if (mysqli_num_rows($res) == 0){
-        echo( " Email n'existe pas ");
-    }else if($e['mdp']!=$mdp){
-        echo( " Mot de passe incorrect ");
-    }else{
-        session_start();
-        $_SESSION["nom"] = $e['nom'];
-        $_SESSION["prenom"] = $e['prenom'];
-        $_SESSION["email"] = $e['email'];
-        $_SESSION["adresse"] = $e['adresse'];
-        $_SESSION["mdp"] = $e['mdp'];
-        $_SESSION["genre"] = $e['genre'];
-        header('Location: http://localhost/p/php/index.php');
+        $req = "select * from compte where email='$email' ";
+        
+        $res = MySQLi_query($con,$req);
+        $e=mysqli_fetch_array($res);
+        
+        if (mysqli_num_rows($res) == 0){
+            echo("<div class='alert alert-danger' id='al' >");
+            echo( "Email n'existe pas");
+            echo("</div>");
+        }else if($e['mdp']!=$mdp){
+            echo("<div class='alert alert-danger' id='al' >");
+            echo( "Mot de passe incorrect");
+            echo("</div>");
+        }else{
+            session_start();
+            $_SESSION["nom"] = $e['nom'];
+            $_SESSION["prenom"] = $e['prenom'];
+            $_SESSION["email"] = $e['email'];
+            $_SESSION["adresse"] = $e['adresse'];
+            $_SESSION["mdp"] = $e['mdp'];
+            $_SESSION["genre"] = $e['genre'];
+            header('Location: http://localhost/p/php/index.php');
+        }
     }
 ?>
-                    </div>
+                    
                     <form action="connexion.php" method="post" class="form-group">
                         <div class="space"></div>
                         <input type="email"  placeholder="E-mail" name="email"  class="form-control " id="mail"><br>
@@ -176,6 +184,19 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
+
+    function increaseHeight()
+    {
+        if(document.getElementById("al").innerHTML=="Email n'existe pas"||document.getElementById("al").innerHTML=="Mot de passe incorrect")
+        {
+            x = parseInt(document.getElementById("box-connexion").style.height)+50;
+            document.getElementById("box-connexion").style.height = x.toString()+"px";
+            x = parseInt(document.getElementById("formsection").style.height)+50;
+            document.getElementById("formsection").style.height = x.toString()+"px";
+        }
+        
+    }
+
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top
