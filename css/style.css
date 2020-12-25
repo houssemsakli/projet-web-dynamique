@@ -31,7 +31,21 @@ body{
     line-height: inherit;
     margin: 70px;font-style: initial;
 }
-.carousel-inner h2 span
+
+.redeffect{
+    width: 1%;
+    height: 50%;
+    position: absolute;
+    right: 0;
+    bottom :  0;
+    background: #BE3144;
+    transition: 2s all;
+    z-index: -2;
+}
+.redeffectanimation {
+    width: 42%;
+}
+/*.carousel-inner h2 span
 {
     background-color: #BE3144;
     color: white;
@@ -40,7 +54,7 @@ body{
     padding-right: 15px;
     padding-bottom: 5px;
 
-}
+}*/
 .imheight{
 	max-height: 100vh;
 }
@@ -70,8 +84,15 @@ body{
 /*-------------------------- nouveautés  --------------------------*/
 .nouvsection{
 	background-color: rgba(255,255,255,0.8);
-	height: 650px;
+	height: 500px;
+	transition: 0.8s;
 }
+
+.animboxnouv{
+	opacity: 0;
+	transition: 1.3s; 
+}
+
 .nouv-title-style{
 	font-size: 40px;
 	margin-top: 20px;
@@ -97,8 +118,13 @@ body{
 /*-------------------------- promo  --------------------------*/
 .promo{
 	background-color: #343a40;
-	height: 650px;
+	height: 500px;
 	color : white;
+	transition: 0.8s;
+}
+.animbox{
+	opacity: 0;
+	transition: 1.3s; 
 }
 .nouv-title-stylepromo{
 	font-size: 40px;
@@ -240,6 +266,14 @@ footer{
 	 position : relative ;
 	 bottom : 0px;
 }	
+/*-------------------------- ****** --------------------------*/
+/*--------------------section Animation ----------------------*/
+.sectionanim{
+	height: 650px;
+}
+.boxanim{
+	opacity: 1;
+}
 /*-------------------------- ****** --------------------------*/
 .form-check-label{
 	color: grey;
