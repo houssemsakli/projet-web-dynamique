@@ -97,7 +97,14 @@
     }else if($e['mdp']!=$mdp){
         echo( " Mot de passe incorrect ");
     }else{
-        header('Location: http://localhost/p/');
+        session_start();
+        $_SESSION["nom"] = $e['nom'];
+        $_SESSION["prenom"] = $e['prenom'];
+        $_SESSION["email"] = $e['email'];
+        $_SESSION["adresse"] = $e['adresse'];
+        $_SESSION["mdp"] = $e['mdp'];
+        $_SESSION["genre"] = $e['genre'];
+        header('Location: http://localhost/p/php/index.php');
     }
 ?>
                     </div>
