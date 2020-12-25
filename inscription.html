@@ -9,7 +9,8 @@
   
     <script src="js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
     <script src="js/popper.min.js" ></script><!-- BOOTSTRAP -->  
-	<script src="js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- BOOTSTRAP -->
 
@@ -51,7 +52,7 @@
 								</div>
 							</li>
 							<li class="nav-item" >
-								<a class="nav-link" href="#contactref" >Contactez-Nous</a>
+								<a class="nav-link cont" href="#" >Contactez-Nous</a>
 							</li>     			      			
 						</ul>
 						<ul class="col-md-3 navbar-nav" >
@@ -166,9 +167,15 @@
     <div class="Copyright ">
         <span class="redcolor">B I N C O</span> <br> © Copyright 2021 
     </div>
-    <a name="contactref"></a>
+    <a id="contactref"></a>
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
-
+<script>
+    $('.cont').click(function() {
+        $('html,body').animate({
+            scrollTop : $('#contactref').offset().top
+        },1000);
+    })
+</script>
 </body>
 </html>
