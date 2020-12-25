@@ -1,141 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Articles [Homme]</title>
+	<title>Articles [Femme]</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="icon" href="images/favicon.png">
-  
-    <script src="js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="js/popper.min.js" ></script><!-- BOOTSTRAP -->  
-	<script src="js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
-    
-	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- BOOTSTRAP -->
+	<link rel="icon" href="../images/favicon.png">
 
-	
+    <script src="../js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../js/popper.min.js" ></script><!-- BOOTSTRAP -->
+	<script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
+
+	<link rel="stylesheet" href="../css/bootstrap.min.css"><!-- BOOTSTRAP -->
+
+
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
 
 
-	<script src="js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
-    <link rel="stylesheet" href="css/style.css" type="text/css"> 
-    <link rel="stylesheet" href="css/articles_style.css" type="text/css"> 
+	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
 </head>
 
 <body>
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
-<header>
+	<header>
 
-	<div class="fixed-top shadow  mb-5  rounded">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
-			<div class="container ">
-				<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav col-md-9">
-						<li class="nav-item active">
-							<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Articles
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-								<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-								<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-							</div>
-						</li>
-						<li class="nav-item" >
-							<a class="nav-link cont" href="#" >Contactez-Nous</a>
-						</li>
-					</ul>
-					<ul class="col-md-3 navbar-nav" >
-						<?php
-                session_start();
-                if(sizeof($_SESSION)>0)
-						{ ?>
-						<!-- il y a  de session -->
-						<li>
-							<a class="nav-link" href="#" >
-								<?php
-                    echo( $_SESSION["prenom"].' ');
-                    echo( $_SESSION["nom"]);
-                ?>
-							</a></li>
-						<!-- DEONNEXION-->
-						<li class="nav-item" >
-							<a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
-						</li>
-						<?php
-                }else {
-                ?>
-						<!-- il y a pas de session -->
-						<li class="nav-item" >
-							<a class="nav-link" href="../inscription.html" >Inscription</a>
-						</li>
-						<li class="nav-item" >
-							<a class="nav-link" href="../connexion.html" >Connexion</a>
-						</li>
-						<?php }?>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header>
+    		<div class="fixed-top shadow  mb-5  rounded">
+    			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
+    				<div class="container ">
+    					<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
+    					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    					<span class="navbar-toggler-icon"></span>
+    					</button>
+    					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+    						<ul class="navbar-nav col-md-9">
+    							<li class="nav-item">
+    								<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
+    							</li>
+    							<li class="nav-item dropdown">
+    								<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    								Articles
+    								</a>
+    								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    									<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
+    									<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
+    									<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
+    								</div>
+    							</li>
+    							<li class="nav-item" >
+    								<a class="nav-link cont" href="#" >Contactez-Nous</a>
+    							</li>
+    						</ul>
+    						<ul class="col-md-3 navbar-nav" >
+                    <?php
+                    session_start();
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                                <!-- il y a  de session -->
+                                <li>
+                                <a class="nav-link" href="#" >
+                    <?php
+                        echo( $_SESSION["prenom"].' ');
+                        echo( $_SESSION["nom"]);
+                    ?>
+                                </a></li>
+                                <!-- DEONNEXION-->
+                                <li class="nav-item" >
+                                    <a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
+                                </li>
+                    <?php
+                    }else {
+                    ?>
+                                <!-- il y a pas de session -->
+                                <li class="nav-item" >
+                                    <a class="nav-link" href="../inscription.html" >Inscription</a>
+                                </li>
+                                <li class="nav-item" >
+                                    <a class="nav-link" href="../connexion.html" >Connexion</a>
+                                </li>
+                    <?php }?>
+    						</ul>
+    					</div>
+    			</div>
+    			</nav>
+    		</div>
+    	</header>
 <!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
-	
-	
+
+
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 
 
 <div class="new">
-	<div class="container "><br>
+	<div class="container "><br><br><br>
 		<div class="row">
-			<div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div> 
+			<div class="col-md-12 text-center new-title-style" >Les Articles des Femmes</div>
 		</div><br><br>
 		<div class="row">
 			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="imgbox" src="images/homme/im1.jpg" alt="shirt">
+					<img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
 				</div>
 			</div>
 			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="images/homme/im1.jpg" alt="shirt">
+				<img class="" src="../images/homme/im1.jpg" alt="shirt">
 			</div></div>
 			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="images/homme/im1.jpg" alt="shirt">
-            </div></div> 
-        
+				<img class="" src="../images/homme/im1.jpg" alt="shirt">
+            </div></div>
+
         </div><br>
         <div class="row">
 			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br> 
-				<img class="" src="images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="i" src="images/homme/im1.jpg" alt="shirt">
-            </div></div> 
-           
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="images/homme/im1.jpg" alt="shirt">
+					<img class="" src="../images/homme/im1.jpg" alt="shirt">
 				</div>
 			</div>
 			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="images/homme/im1.jpg" alt="shirt">
+				<img class="" src="../images/homme/im1.jpg" alt="shirt">
 			</div></div>
 			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="images/homme/im1.jpg" alt="shirt">
-            </div></div> 
-           
+				<img class="i" src="../images/homme/im1.jpg" alt="shirt">
+            </div></div>
+
+        </div><br>
+        <div class="row">
+			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+					<img class="" src="../images/homme/im1.jpg" alt="shirt">
+				</div>
+			</div>
+			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+				<img class="" src="../images/homme/im1.jpg" alt="shirt">
+			</div></div>
+			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+				<img class="" src="../images/homme/im1.jpg" alt="shirt">
+            </div></div>
+
 		</div><br>
 	</div>
 </div>
@@ -191,11 +191,11 @@
                         </tr>
                     </table>
                 </div>
-            </div>		
+            </div>
         </div>
     </div>
     <div class="Copyright ">
-        <span class="redcolor">B I N C O</span> <br> © Copyright 2021 
+        <span class="redcolor">B I N C O</span> <br> © Copyright 2021
     </div>
     <a id="contactref"></a>
 </footer>
