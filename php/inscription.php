@@ -7,21 +7,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="icon" href="images/favicon.png">
   
-    <script src="js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="js/popper.min.js" ></script><!-- BOOTSTRAP -->  
-    <script src="js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
+    <script src="../js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../js/popper.min.js" ></script><!-- BOOTSTRAP -->  
+    <script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
 	
-	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css"><!-- BOOTSTRAP -->
 
 	
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
 
 
-	<script src="js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
-    <link rel="stylesheet" href="css/style.css" type="text/css"> 
-    <link rel="stylesheet" href="css/connexioninscri_style.css" type="text/css"> 
-	<script src="js/verifInscri.js">
+	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
+    <link rel="stylesheet" href="../css/style.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/connexioninscri_style.css" type="text/css"> 
+	<script src="../js/verifInscri.js">
 	</script>
 </head>
 
@@ -32,23 +32,23 @@
 		<div class=" shadow  mb-5  rounded">
 			<nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark row ">
 				<div class="container ">
-					<a class="navbar-brand" href="index.html"><img src="images\binco.png" alt="BINCO"></a>
+					<a class="navbar-brand" href="../index.html"><img src="../images\binco.png" alt="BINCO"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav col-md-9">
 							<li class="nav-item ">
-								<a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+								<a class="nav-link" href="../index.html">Accueil <span class="sr-only">(current)</span></a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Articles
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<a class="dropdown-item" href="articleshomme.html">Homme</a>
-									<a class="dropdown-item" href="articlesfemme.html">Femme</a>
-									<a class="dropdown-item" href="articlesenfant.html">Enfant</a>
+									<a class="dropdown-item" href="../articleshomme.html">Homme</a>
+									<a class="dropdown-item" href="../articlesfemme.html">Femme</a>
+									<a class="dropdown-item" href="../articlesenfant.html">Enfant</a>
 								</div>
 							</li>
 							<li class="nav-item" >
@@ -57,10 +57,10 @@
 						</ul>
 						<ul class="col-md-3 navbar-nav" >
 							<li class="nav-item active" >
-								<a class="nav-link" href="inscription.html" >Inscription</a>
+								<a class="nav-link" href="../inscription.html" >Inscription</a>
 							</li>
 							<li class="nav-item " >
-								<a class="nav-link" href="connexion.html" >Connexion</a>
+								<a class="nav-link" href="../connexion.html" >Connexion</a>
 							</li>   
 						</ul>    	
 					</div>
@@ -75,40 +75,35 @@
 <div class=" formsection" style="height: 900px;" id="bigbox">
 	<div class="container ">
 		<div class="row">
-			<div class="col-md-12 text-center nouv-title-style form-title-style" >Inscription</div> 
+			<div class="col-md-12 text-center nouv-title-style form-title-style" ></div> 
 		</div><br>
             <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " style="height: 700px;" id="hei" >
                 <div class="container">
                     <div class="space"></div>
-                    <form  action="php/inscription.php" method="post" class="form-group" name="frm"><br>
-                        <div class="alert alert-danger d-none" id="ernom">le nom est invalide</div>
-                        <div class="alert alert-danger d-none" id="erpren">le prenom est invalide</div>
-                        <div class="alert alert-danger d-none" id="ermdp">le mot de passe est invalide</div>
-                        <div class="space"></div>
+<?php
+    $con = MySQLi_connect("localhost","root","") ;
+    MySQLi_select_db($con,"bincoDb") ;
 
-                        <input type="text" placeholder="Nom" name="nom" class="form-control " id="nom" onblur="VerifNom();Verifier()" required><br>
-                        <input type="text" placeholder="Prénom" name="prenom" class="form-control " id="prenom" onblur="VerifPren();Verifier()" required><br>
-                        <input type="email" placeholder="E-mail" name="email"  class="form-control " id="email" onblur="Verifier()" required><br>
-                        <input type="password" placeholder="Mot de passe" name="mdp" class="form-control " id="mdp"onblur="Verifier()" required><br>
-                        <input type="password" placeholder="Confirmer le mot de passe" class="form-control" id="mdp2" onblur="VerifMdp();Verifier()"  required><br>
-                    
-                        <div class="row form-check" style="text-align: left;  width : 500px ">
-                            <span class="col-md-6" style="color : rgb(116, 115, 115) ;font-size: 18px; font-family:  sans-serif;font-weight: 900;margin-left: -20px;" >
-                                Genre :
-                            </span>
-                            <input class="col-md-1 form-check-input" type="radio" name="genre" id="femme" value="f" >
-                            <label class="col-md-2 form-check-label" for="femme">
-                                Femme 
-                            </label>
-                            <input class="col-md-1 form-check-input" type="radio" name="genre" id="homme" value="h" >
-                            <label class="col-md-2 form-check-label" for="homme">
-                                Homme
-                            </label>
-                        </div><br>
-                        <textarea style="max-height: 103px;" name="adresse" class="form-control" placeholder="Adresse" rows="3"id="adr" onblur="Verifier()"required></textarea>
-                        <br>
-                        <input class="btn-submit-inscription  " type="submit" value="Inscription" id="sub" disabled onclick="Verifier()">
-                    </form>
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $mdp = $_POST['mdp'];
+    $genre = $_POST['genre'];
+    $adresse = $_POST['adresse'];
+    
+    $req = "insert into compte values ('$email','$nom','$prenom','$mdp','$genre','$adresse')";
+    
+    MySQLi_query($con,$req);
+    
+    if (mysqli_affected_rows($con)<0){
+        echo( "Email existe déja ");
+    }else{
+        echo( "Inscription réussie ");
+    }
+?>                      
+
+
+
                 </div>
             </div>
 	</div>
