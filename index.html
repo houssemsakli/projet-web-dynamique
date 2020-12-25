@@ -206,9 +206,6 @@
 	<!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 	<!-- ------------------------------------------ JQUERY BEGIN ----------------------------------------------   -->
 	<script>
-
-		
-
 		$('.cont').click(function() {
 			$('html,body').animate({
 				scrollTop : $('#contactref').offset().top
@@ -240,6 +237,11 @@
 					$('.nouvsection').addClass("sectionanim");
 				}
 			});
+		});
+
+		//vitesse de caroussel 
+		$('.carousel').carousel({
+				interval: 300 
 		});
 
 		//red effect animation 
