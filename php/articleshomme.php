@@ -39,7 +39,7 @@
                 session_start();
                 if(sizeof($_SESSION)>0)
 				{ ?>
-							<ul class="navbar-nav col-md-8">
+							<ul class="navbar-nav col-md-7">
 								<li class="nav-item ">
 									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
 								</li>
@@ -57,7 +57,7 @@
 									<a class="nav-link cont" href="#" >Contactez-Nous</a>
 								</li>     			      			
 							</ul>
-							<ul class="col-md-4 navbar-nav " style="text-align: right">
+							<ul class="col-md-5 navbar-nav " style="text-align: right">
                             <!-- il y a  de session -->  
                             <li>
                             <a class="nav-link" href="#" >
