@@ -26,49 +26,49 @@
 </head>
 
 <body>
-	<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
-	<header>
-		
-		<div class=" shadow  mb-5  rounded">
-			<nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark row ">
-				<div class="container ">
-					<a class="navbar-brand" href="index.php"><img src="../images\binco.png" alt="BINCO"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<ul class="navbar-nav col-md-9">
-							<li class="nav-item ">
-								<a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								Articles
-								</a>
-								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-									<a class="dropdown-item" href="articleshomme.php">Homme</a>
-									<a class="dropdown-item" href="articlesfemme.php">Femme</a>
-									<a class="dropdown-item" href="articlesenfant.php">Enfant</a>
-								</div>
-							</li>
-							<li class="nav-item" >
-								<a class="nav-link cont" href="#" >Contactez-Nous</a>
-							</li>     			      			
-						</ul>
-						<ul class="col-md-3 navbar-nav" >
-							<li class="nav-item active" >
-								<a class="nav-link" href="../inscription.html" >Inscription</a>
-							</li>
-							<li class="nav-item " >
-								<a class="nav-link" href="../php/connexion.php" >Connexion</a>
-							</li>   
-						</ul>    	
-					</div>
-			</div>
-			</nav>
-		</div>
-	</header>
-	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
+<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
+<header>
+    
+    <div class=" shadow  mb-5  rounded">
+        <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark row ">
+            <div class="container ">
+                <a class="navbar-brand" href="index.php"><img src="../images\binco.png" alt="BINCO"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav col-md-9">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Articles
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="articleshomme.php">Homme</a>
+                                <a class="dropdown-item" href="articlesfemme.php">Femme</a>
+                                <a class="dropdown-item" href="articlesenfant.php">Enfant</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link cont" href="#" >Contactez-Nous</a>
+                        </li>     			      			
+                    </ul>
+                    <ul class="col-md-3 navbar-nav" >
+                        <li class="nav-item active" >
+                            <a class="nav-link" href="../inscription.html" >Inscription</a>
+                        </li>
+                        <li class="nav-item " >
+                            <a class="nav-link" href="../php/connexion.php" >Connexion</a>
+                        </li>   
+                    </ul>    	
+                </div>
+        </div>
+        </nav>
+    </div>
+</header>
+<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 	
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->

@@ -25,121 +25,195 @@
 
 <body>
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
-	<header>
+<header>
+		
+		<div class="fixed-top shadow  mb-5  rounded">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
+				<div class="container ">
+					<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <?php 
+                session_start();
+                if(sizeof($_SESSION)>0)
+				{ ?>
+							<ul class="navbar-nav col-md-8">
+								<li class="nav-item ">
+									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item dropdown active">
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Articles
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
+										<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
+										<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
+									</div>
+								</li>
+								<li class="nav-item" >
+									<a class="nav-link cont" href="#" >Contactez-Nous</a>
+								</li>     			      			
+							</ul>
+							<ul class="col-md-4 navbar-nav " style="text-align: right">
+                            <!-- il y a  de session -->  
+                            <li>
+                            <a class="nav-link" href="#" >
+                <?php
+                    echo( $_SESSION["prenom"].' ');
+                    echo( $_SESSION["nom"]);
+                ?>
+							</a></li>
+							
+							<li class="nav-item" >
+                                <a class="nav-link"  href="mesachats.php" >Mes achats</a>
+                            </li>
+                            <!-- DEONNEXION-->
+                            <li class="nav-item" >
+                                <a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
+                            </li>
+                <?php
+                }else {  
+				?>
+							<ul class="navbar-nav col-md-9">
+								<li class="nav-item ">
+									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item dropdown active">
+									<a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Articles
+									</a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+										<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
+										<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
+										<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
+									</div>
+								</li>
+								<li class="nav-item" >
+									<a class="nav-link cont" href="#" >Contactez-Nous</a>
+								</li>     			      			
+							</ul>
+							<ul class="col-md-3 navbar-nav " style="text-align: right">
+                            <!-- il y a pas de session -->    
+                            <li class="nav-item" >
+                                <a class="nav-link" href="../inscription.html" >Inscription</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link" href="../php/connexion.php" >Connexion</a>
+                            </li>
+                <?php }?>  
+						</ul>    	
+					</div>
+			</div>
+			</nav>
+		</div>
+	</header>
+	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 
-    		<div class="fixed-top shadow  mb-5  rounded">
-    			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
-    				<div class="container ">
-    					<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
-    					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    					<span class="navbar-toggler-icon"></span>
-    					</button>
-    					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-    						<ul class="navbar-nav col-md-9">
-    							<li class="nav-item">
-    								<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-    							</li>
-    							<li class="nav-item dropdown">
-    								<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    								Articles
-    								</a>
-    								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    									<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-    									<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-    									<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-    								</div>
-    							</li>
-    							<li class="nav-item" >
-    								<a class="nav-link cont" href="#" >Contactez-Nous</a>
-    							</li>
-    						</ul>
-    						<ul class="col-md-3 navbar-nav" >
-                    <?php
-                    session_start();
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                                <!-- il y a  de session -->
-                                <li>
-                                <a class="nav-link" href="#" >
-                    <?php
-                        echo( $_SESSION["prenom"].' ');
-                        echo( $_SESSION["nom"]);
-                    ?>
-                                </a></li>
-                                <!-- DEONNEXION-->
-                                <li class="nav-item" >
-                                    <a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
-                                </li>
-                    <?php
-                    }else {
-                    ?>
-                                <!-- il y a pas de session -->
-                                <li class="nav-item" >
-                                    <a class="nav-link" href="../inscription.html" >Inscription</a>
-                                </li>
-                                <li class="nav-item" >
-                                    <a class="nav-link" href="../php/connexion.php" >Connexion</a>
-                                </li>
-                    <?php }?>
-    						</ul>
-    					</div>
-    			</div>
-    			</nav>
-    		</div>
-    	</header>
-<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
+<?php 
+    if(sizeof($_SESSION)>0)
+    { 
+        if(isset($_POST["name"]))
+        {
+            array_push($_SESSION["achats"] , $_POST["name"]);
+        }else{
+            $tab = array();
+            $_SESSION["achats"] = $tab;
+        }
+    }
+?>
+<form name="f" method="post" action="?" >
+    
+    <div class="new">
+        <div class="container "><br><br>
+            <input type="text" class="d-none" style="top:100px" name="name" id="inputtext">
+            <div class="row">
+                <div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
+            </div><br><br>
+            <div class="row">
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                    
+                    <?php 
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <button type="shopcart" id="trikou"class="subbtn" onclick="mesachats(this.id)"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php
+                    }?>
+
+                    </div>
+                </div>
+                
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="row">
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+            </div><br>
 
 
-<div class="new">
-	<div class="container "><br><br><br>
-		<div class="row">
-			<div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
-		</div><br><br>
-		<div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
+            <div class="row">
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
+                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <br>
+        </div>
+    </div>
 
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="i" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
-
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
-
-		</div><br>
-	</div>
-</div>
-
+</form>
 
 <!-- -------------------------------------------- article homme END ----------------------------------------------   -->
 
@@ -201,6 +275,12 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
+    function mesachats(clicked_id)
+    {
+        document.getElementById("inputtext").value = clicked_id ; 
+    }
+
+
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top
