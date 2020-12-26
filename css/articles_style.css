@@ -24,7 +24,8 @@
     border-radius: 3px;
     transition : .8s;
     outline: none ;
-    
+    height: 50px;
+    width: 50px;
 }
 .subbtn:hover {
    
