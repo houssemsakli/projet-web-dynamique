@@ -39,7 +39,7 @@
                 session_start();
                 if(sizeof($_SESSION)>0)
 				{ ?>
-							<ul class="navbar-nav col-md-8">
+							<ul class="navbar-nav col-md-7">
 								<li class="nav-item ">
 									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
 								</li>
@@ -57,7 +57,7 @@
 									<a class="nav-link cont" href="#" >Contactez-Nous</a>
 								</li>     			      			
 							</ul>
-							<ul class="col-md-4 navbar-nav " style="text-align: right">
+							<ul class="col-md-5 navbar-nav " style="text-align: right">
                             <!-- il y a  de session -->  
                             <li>
                             <a class="nav-link" href="#" >
@@ -122,18 +122,21 @@
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >La liste des achats </div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 200px;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 250px; position: relative;">
                 <div class="container">
                     <div class=" space" ></div>
                     <?php
-                        foreach($_SESSION["achats"] as $obj)
-                        {
-                            echo("<div class='alert alert-success'>");
-                            echo("produit : ". $obj);
-                            echo("</div>");
-                        }
                         if(sizeof($_SESSION["achats"])>0)
-                            echo('<button class="btn btn-outline-dark btn-lg btn-block" style="margin-top:20px ">Commander</button></div>');
+                        {
+                            foreach($_SESSION["achats"] as $obj)
+                            {
+                                echo("<div class='alert alert-success'>");
+                                echo("produit : ". $obj);
+                                echo("</div>");
+                            }
+                            echo('<button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button>');
+                            echo('<form action="annulerachat.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
+                        }
                         else
                             echo("<div class='alert alert-danger'>Vous n'avez pas ajouté(e) des articles </div>");
                            
@@ -203,10 +206,10 @@
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("box-connexion").style.height)+50;
+        x = parseInt(document.getElementById("box-connexion").style.height)+60;
         document.getElementById("box-connexion").style.height = x.toString()+"px";
         
-        x2 = parseInt(document.getElementById("f").style.height)+50;
+        x2 = parseInt(document.getElementById("f").style.height)+60;
         document.getElementById("f").style.height = x2.toString()+"px";
     }  
     function incheight(){
