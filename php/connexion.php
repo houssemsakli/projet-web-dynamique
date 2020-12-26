@@ -84,7 +84,7 @@
     MySQLi_select_db($con,"bincoDb") ;
 
 
-    if(isset($_POST["email"]))
+    if(isset($_POST["email"])&&isset($_POST["email"]))
     {
         $email = $_POST['email'];
         $mdp = $_POST['mdp'];
