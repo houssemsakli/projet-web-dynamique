@@ -1,3 +1,5 @@
+
+
 .boxnew{
     height: 400px;
     position : relative; 
@@ -5,13 +7,6 @@
 .new {
     height: 1200px;
 }
-
-
-/* ---------------------- add to shopping cart css ---------------------*/
-
-/* ---------------------- ---------------------- ---------------------*/
-
-
 .subbtn{
     border : 0px; 
     font-size:22px ;
@@ -38,7 +33,30 @@
     background-color: rgb(0, 0, 0);outline: none ;
 }
 
+<<<<<<< HEAD
 /* ---------------------- Contenu article ---------------------*/
+=======
+
+
+/* ------------------- article --------------------*/
+
+
+
+/* ------------------- ------- --------------------*/
+
+
+
+
+
+
+
+/********************* Product **********************/
+.product{font-family:Roboto,sans-serif;
+    text-align:center;
+    position:relative;
+    z-index:1;
+}
+>>>>>>> 158b381 (javascript article)
 
 .imgbox{
     height: 100%;
