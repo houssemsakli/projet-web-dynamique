@@ -3,7 +3,7 @@
     position : relative; 
 }
 .new {
-    height: 1700px;
+    height: 1200px;
 }
 
 
@@ -38,159 +38,83 @@
     background-color: rgb(0, 0, 0);outline: none ;
 }
 
-/********************* Product **********************/
-.product{font-family:Roboto,sans-serif;
-    text-align:center;
-    position:relative;
-    z-index:1;
+/* ---------------------- Contenu article ---------------------*/
+
+.imgbox{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
 }
 
-.product:before
-{   content:"";
-    height:81%;
-    width:100%;
-    background:#fff;
-    border:1px solid rgba(0,0,0,.1);
-    opacity:0;
-    position:absolute;
-    top:0;left:0;
-    z-index:-1;
-    transition:all .5s ease 0s
+.img1{
+    opacity: 1;
+    height: 326px;
+    width: 255px;
+    position: absolute;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
 }
-.product:hover:before
-{   
-    opacity:1;
-    height:100%;
-    border-radius: 10%;
+.img2{
+    opacity: 0;
+    height: 326px;
+    width: 255px;
+    position: absolute;
+    transition: 0.5s;
+    border-radius: 4%;
 }
-.product .product-image
-{
-    position:relative
+
+.img1:hover{
+    opacity: 0;
+
 }
-.product .product-image a
-{
-    display:block
+
+.img2:hover{
+    opacity: 1;
 }
-.product .product-image img
-{
-    width:100%;
-    height:auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+.product-new-label{
+    background-color: #BE3144;
+    color: #fff;
+    padding: 2px 20px;
+    position: absolute;
+    right: -5px;
+    top: 10px;
 }
-.product .pic-1
-{
-    opacity:1;
-    transition:all .5s ease-out 0s
-}
-.product:hover .pic-1
-{
-    opacity:0
-}
-.product .pic-2
-{
-    position:absolute;
-    top:0;left:0;opacity:0;
-    transition:all .5s ease-out 0s
-}
-.product:hover .pic-2
-{
-    opacity:1
-}
-.product .social
-{
-    width:120px;
-    padding:0;
-    margin:0 auto;
-    list-style:none;
-    opacity:0;
-    position:absolute;
-    right:0;
-    left:0;
-    bottom:-23px;
-    transform:scale(0);
-    transition:all .3s ease 0s
-}
-.product:hover .social
-{
-    opacity:1;
-    transform:scale(1)
-}
-.product:hover .product-discount-label,.product:hover .product-new-label,.product:hover .title
-{
-    opacity:0
-}
-.product .social li
-{
-    display:inline-block
-}
-.product .social li a
-{
+
+.fa-shopping-cart{
+    position: absolute;
+    right:10px;
+    top: 300px;
     color:#BE3144;
     background:#fff;
-    font-size:18px;
-    line-height:50px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
     width:50px;
     height:50px;
-    border:1px solid rgba(0,0,0,.1);
     border-radius:50%;
-    margin:0 2px;
-    display:block;
-    transition:all .3s ease 0s
-}
-.product .social li a:hover
-{
-    background:#BE3144;
-    color:#fff
-}
-.product .product-new-label
-{
-    background-color:#BE3144;
-    color:#fff;
-    font-size:17px;
-    padding:2px 20px;
-    position:absolute;
-    right:10px;
-    top:10px;
-    transition:all .5s;
-    margin-right: -20px;
-}
-.product .product-content
-{
-    z-index:-1;
-    padding:15px;
-    text-align:left;
-}
-.product .title
-{
-    font-size:14px;
-    text-transform:capitalize;
-    margin:0 0 7px;
-    transition:all .3s ease 0s
-}
-.product .title a
-{
-    color:#414141
-}
-.product .price
-{
-    color:#000;
-    font-size:16px;
-    letter-spacing:1px;
-    font-weight:600;
-    margin-right:2px;
-    display:inline-block
-}
-.product .price span
-{
-    color:#909090;
-    font-size:14px;
-    font-weight:500;
-    letter-spacing:0;
-    text-decoration:line-through;
-    text-align:left;
-    display:inline-block;
-    margin-top:-2px
+    transition: 0.5s;
 }
 
-/********************* Product **********************/
+.fa-shopping-cart:hover{
+    background:#BE3144;
+    color:#fff;
+}
+
+.content
+{
+    position: relative;
+    top: 340px;
+    text-align: left;
+    margin: 10px;
+}
+
+.produit
+{
+    position: relative; 
+    height: 420px; 
+    width: auto;
+    background-color: #fafafa; 
+    border-radius: 4%;
+}
