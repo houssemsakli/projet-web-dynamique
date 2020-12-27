@@ -1,3 +1,5 @@
+
+
 .boxnew{
     height: 400px;
     position : relative; 
@@ -5,13 +7,6 @@
 .new {
     height: 1700px;
 }
-
-
-/* ---------------------- add to shopping cart css ---------------------*/
-
-/* ---------------------- ---------------------- ---------------------*/
-
-
 .subbtn{
     border : 0px; 
     font-size:22px ;
@@ -37,6 +32,20 @@
     color : rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);outline: none ;
 }
+
+
+
+/* ------------------- article --------------------*/
+
+
+
+/* ------------------- ------- --------------------*/
+
+
+
+
+
+
 
 /********************* Product **********************/
 .product{font-family:Roboto,sans-serif;
