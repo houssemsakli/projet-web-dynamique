@@ -119,170 +119,218 @@
 <form name="f" method="post" action="mesachats.php" >
     
     <div class="new">
-        <div class="container "><br><br>
+        <div class="container "><br><br><br>
             
             <div class="row">
                 <div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
-            </div><br><br>
+            </div><br>
             <div class="row">
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-11.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-12.jpg" alt="shirt">
+                        
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems(this.id,this);nbrachats()" id="Mens Blazer 1" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                <ul class="d-none" name="cartitems" id="cartitems">
+                                </ul>
+                            <?php
+                            }?>                   
+                        </div>
+                        <div class="content">
+                            <h4>Men's Blazer 1</h4>
+                            <h6><b>$51.00</b></h6>
+                        </div>   
+                    </div>
+                </div>
                     
-                    <?php 
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn" onclick="addcartitems(this.id,this);nbrachats()" id="trikou" style="position:absolute; left : 0px ; bottom: 0px">
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-3.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-4.jpg" alt="shirt">
+                            <span class="product-new-label">NEW !!</span>
+
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                
+                            <?php
+                            }?>               
                         </div>
-
-
-                        <ul class="d-none" name="cartitems" id="cartitems">
-                        
-                        </ul>
-                        
-                    <?php
-                    }?>
-
+                        <div class="content">
+                            <h4>Men's T-Shirt</h4>
+                            <h6><b>$63.00</b> <s style="color: grey;">$75.00</s></h6>
+                        </div>   
                     </div>
                 </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-15.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-16.jpg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                    
+                                <?php
+                                }?>               
+                        </div>
+                        <div class="content">
+                            <h4>Men's T-Shirt 2</h4>
+                            <h6><b>$53.00</b></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-23.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-24.jpg" alt="shirt">
+                                <span class="product-new-label">NEW !!</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                  
+                        </div>
+                        <div class="content">
+                            <h4>Men's T-Shirt 3</h4>
+                            <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
+                        </div>   
+                    </div>
+                </div>   
                 
-                <div class="col-md-4 ">
-                    <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                        if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou3" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
-                        </div>
-                       
-                    <?php
-                    }?>
-                    </div>
-                </div>
-                
-
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou4" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
-                        </div>
-                       
-                    <?php
-                    }?>
-                    </div>
-                </div>
-            </div><br>
-
+            </div>
             <div class="row">
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou5" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
-                        </div>
-                       
-                    <?php
-                    }?>
-                    </div>
-                </div>
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou6" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
-                        </div>
-                       
-                    <?php
-                    }?>
-                    </div>
-                </div>
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou7" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
-                        </div>
-                       
-                    <?php
-                    }?>
-                    </div>
-                </div>
-            </div><br>
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-25.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-26.jpg" alt="shirt">
+                                <span class="product-new-label">NEW !!</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
 
+                                   
+                                <?php
+                                }?>                     
+                        </div>
+                        <div class="content">
+                            <h4>Men's Blazer 2</h4>
+                            <h6><b>$70.00</b> <s style="color: grey;">$61.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
 
-            <div class="row">
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou8" style="position:absolute; left : 0px ; bottom: 0px">
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-111.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-211.jpg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                     
                         </div>
-                       
-                    <?php
-                    }?>
+                        <div class="content">
+                            <h4>Men's Blazer 3</h4>
+                            <h6><b>$59.00</b></h6>
+                        </div>   
                     </div>
                 </div>
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou9" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-300.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-400.jpg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+                                <?php
+                                }?>                     
                         </div>
-                       
-                    <?php
-                    }?>
+                        <div class="content">
+                            <h4>Men's T-Shirt 4</h4>
+                            <h6><b>$62.00</b></h6>
+                        </div>   
                     </div>
                 </div>
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-                        <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                    <?php    
-                    if(sizeof($_SESSION)>0)
-                    { ?>
-                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou2" style="position:absolute; left : 0px ; bottom: 0px" >
-                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/homme/img-7.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/homme/img-8.jpg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+                                <?php
+                                }?>                     
                         </div>
-                       
-                    <?php
-                    }?>
+                        <div class="content">
+                            <h4>Men's T-Shirt 5</h4>
+                            <h6><b>$69.00</b></h6>
+                        </div>   
                     </div>
+                </div>       
+
+            </div><br><br>
+
+            
+            <div class="row" >
+                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->
+                    <button class="button">
+                        <i class="fa fa-shopping-cart"></i> <div style="position:absolute;right:22px;top:0px;"id="nbrachats" > 0</div>
+                    </button>
                 </div>
             </div>
-            
-            <br>
-        </div>
-        <div class="row" >
-        <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->
-            <button class="btn btn-primary" style="height:45px;" >
-                Envoyer
-            </button>
-            <span class="alert alert-danger " id="nbrachats" >0</span>
+
+
         </div>
     </div>
-    </div>
-    
 </form>
 <!-- -------------------------------------------- article homme END ----------------------------------------------   -->
 
@@ -346,15 +394,14 @@
     
     function addcartitems(clicked_id,th)
     {
-        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li >"+clicked_id+" <input type='hidden' name='cartitems[]' value='"+clicked_id+"'/></li>" ;
+        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"'/></li>" ;
         th.classList.add('d-none');
         //document.getElementById(clicked_id).classList.add('d-none');
     }
 
     function nbrachats()
     {
-        x = parseInt(document.getElementById('nbrachats').innerHTML)+1;
-        document.getElementById('nbrachats').innerHTML = x;
+        document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
     }
 
     $('.cont').click(function() {
