@@ -115,23 +115,12 @@
 
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-<?php 
-    if(sizeof($_SESSION)>0)
-    { 
-        if(isset($_POST["name"]))
-        {
-            array_push($_SESSION["achats"] , $_POST["name"]);
-        }else{
-            $tab = array();
-            $_SESSION["achats"] = $tab;
-        }
-    }
-?>
-<form name="f" method="post" action="?" >
+
+<form name="f" method="post" action="mesachats.php" >
     
     <div class="new">
         <div class="container "><br><br>
-            <input type="text" class="d-none" style="top:100px" name="name" id="inputtext">
+            
             <div class="row">
                 <div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
             </div><br><br>
@@ -143,17 +132,34 @@
                     <?php 
                     if(sizeof($_SESSION)>0)
                     { ?>
-                        <button type="shopcart" id="trikou"class="subbtn" onclick="mesachats(this.id)"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                        <div class="btn btn-primary subbtn" onclick="addcartitems(this.id,this);nbrachats()" id="trikou" style="position:absolute; left : 0px ; bottom: 0px">
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+
+
+                        <ul class="d-none" name="cartitems" id="cartitems">
+                        
+                        </ul>
+                        
                     <?php
                     }?>
 
                     </div>
                 </div>
                 
-                <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
+                <div class="col-md-4 ">
+                    <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                        if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou3" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
                 
@@ -161,7 +167,15 @@
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou4" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
             </div><br>
@@ -170,19 +184,43 @@
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou5" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou6" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou7" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
             </div><br>
@@ -192,31 +230,61 @@
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou8" style="position:absolute; left : 0px ; bottom: 0px">
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou9" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
                 <div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
                         <img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-                        <button type="shopcart"class="subbtn"><i class="fa fa-cart-plus shopcart " type="submit"  aria-hidden="true" ></i></button>
+                    <?php    
+                    if(sizeof($_SESSION)>0)
+                    { ?>
+                        <div class="btn btn-primary subbtn"  onclick="addcartitems(this.id,this);nbrachats()" id="trikou2" style="position:absolute; left : 0px ; bottom: 0px" >
+                            <i class="fa fa-cart-plus " type="submit"  aria-hidden="true" ></i>
+                        </div>
+                       
+                    <?php
+                    }?>
                     </div>
                 </div>
             </div>
             
             <br>
         </div>
+        <div class="row" >
+        <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->
+            <button class="btn btn-primary" style="height:45px;" >
+                Envoyer
+            </button>
+            <span class="alert alert-danger " id="nbrachats" >0</span>
+        </div>
     </div>
-
+    </div>
+    
 </form>
-
 <!-- -------------------------------------------- article homme END ----------------------------------------------   -->
-
 
 <!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
 <footer >
@@ -275,11 +343,19 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
-    function mesachats(clicked_id)
+    
+    function addcartitems(clicked_id,th)
     {
-        document.getElementById("inputtext").value = clicked_id ; 
+        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li >"+clicked_id+" <input type='hidden' name='cartitems[]' value='"+clicked_id+"'/></li>" ;
+        th.classList.add('d-none');
+        //document.getElementById(clicked_id).classList.add('d-none');
     }
 
+    function nbrachats()
+    {
+        x = parseInt(document.getElementById('nbrachats').innerHTML)+1;
+        document.getElementById('nbrachats').innerHTML = x;
+    }
 
     $('.cont').click(function() {
         $('html,body').animate({
