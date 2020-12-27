@@ -82,7 +82,7 @@
     top: 10px;
 }
 
-.fa-shopping-cart{
+.bg-white .fa-shopping-cart{
     position: absolute;
     right:10px;
     top: 300px;
@@ -97,9 +97,10 @@
     transition: 0.5s;
 }
 
-.fa-shopping-cart:hover{
+.bg-white .fa-shopping-cart:hover{
     background:#BE3144;
     color:#fff;
+    cursor: pointer;
 }
 
 .content
@@ -118,3 +119,15 @@
     background-color: #fafafa; 
     border-radius: 4%;
 }
+/*----------------------------------------------*/
+.button {
+    background-color: #BE3144;
+    border: none;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 100%;
+    position: relative;
+  }
