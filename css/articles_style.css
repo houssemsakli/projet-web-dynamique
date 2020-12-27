@@ -1,5 +1,3 @@
-
-
 .boxnew{
     height: 400px;
     position : relative; 
@@ -7,6 +5,13 @@
 .new {
     height: 1200px;
 }
+
+
+/* ---------------------- add to shopping cart css ---------------------*/
+
+/* ---------------------- ---------------------- ---------------------*/
+
+
 .subbtn{
     border : 0px; 
     font-size:22px ;
@@ -34,29 +39,12 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* ---------------------- Contenu article ---------------------*/
 =======
-
-
-/* ------------------- article --------------------*/
-
-
-
-/* ------------------- ------- --------------------*/
-
-
-
-
-
-
-
-/********************* Product **********************/
-.product{font-family:Roboto,sans-serif;
-    text-align:center;
-    position:relative;
-    z-index:1;
-}
->>>>>>> 158b381 (javascript article)
+=======
+/* ---------------------- Contenu article ---------------------*/
+>>>>>>> 89375e2 (js homme)
 
 .imgbox{
     height: 100%;
@@ -64,7 +52,18 @@
     padding: 0px;
     margin: 0px;
 }
+>>>>>>> 158b381 (javascript article)
 
+<<<<<<< HEAD
+.imgbox{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+=======
+>>>>>>> 89375e2 (js homme)
 .img1{
     opacity: 1;
     height: 326px;
