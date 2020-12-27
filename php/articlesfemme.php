@@ -121,50 +121,98 @@
 
 
 <div class="new">
-	<div class="container "><br><br><br>
-		<div class="row">
-			<div class="col-md-12 text-center new-title-style" >Les Articles des Femmes</div>
-		</div><br><br>
-		<div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
+        <div class="container "><br><br>
+            <div class="text-center new-title-style" >Les Articles des Hommes</div>
+            <br><br>
+            <div class="row">
+				<div class="col-md-3">
+					<div class="product">
+						<div class="product-image">
+							<a href="#">
+								<img class="pic-1" src="../images/article/home/img-11.jpg">
+								<img class="pic-2" src="../images/article/home/img-12.jpg">
+							</a>
+							<ul class="social">
+								<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+							</ul>
+							<span class="product-new-label">New !!</span>
+						</div>
+						<div class="product-content">
+							<h3 class="title"><a href="#">Men's Blazer</a></h3>
+							<div class="price">
+								$63.50
+								<span>$75.00</span>
+							</div>
+						</div>
 				</div>
 			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
-
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="i" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
-
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
-
-		</div><br>
-	</div>
+			<div class="col-md-3" >
+				<div class="product">
+					<div class="product-image">
+						<a href="#">
+							<img class="pic-1" src="../images/article/home/img-3.jpg">
+							<img class="pic-2" src="../images/article/home/img-4.jpg">
+						</a>
+						<ul class="social">
+							<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+							<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+						</ul>
+					</div>
+					<div class="product-content">
+						<h3 class="title"><a href="#">Blue T-shirt </a></h3>
+						<div class="price">
+							$20.50
+						</div>
+					</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="product">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../images/article/home/img-15.jpg">
+                        <img class="pic-2" src="../images/article/home/img-16.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New !!</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                    <div class="price">
+                        $63.50
+                        <span>$75.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="product">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../images/article/home/img-111.jpg">
+                        <img class="pic-2" src="../images/article/home/img-211.jpg">
+                    </a>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <span class="product-new-label">New !!</span>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
+                    <div class="price">
+                        $63.50
+                        <span>$75.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>     
 </div>
 
 
