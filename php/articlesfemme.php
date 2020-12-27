@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
 </head>
 
-<body>
+<body >
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
 <header>
 		
@@ -116,111 +116,145 @@
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 
-
-<!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
-
 <div class="new">
-        <div class="container "><br><br>
-            <div class="text-center new-title-style" >Les Articles des Hommes</div>
-            <br><br>
-            <div class="row">
-				<div class="col-md-3">
-					<div class="product">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="../images/article/home/img-11.jpg">
-								<img class="pic-2" src="../images/article/home/img-12.jpg">
-							</a>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-								<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">New !!</span>
-						</div>
-						<div class="product-content">
-							<h3 class="title"><a href="#">Men's Blazer</a></h3>
-							<div class="price">
-								$63.50
-								<span>$75.00</span>
-							</div>
-						</div>
-				</div>
-			</div>
+
+    <div class="container "><br><br>
+        <div class="text-center new-title-style" >Les Articles des Hommes</div>
+        <br><br>
+        <div class="row">
 			<div class="col-md-3" >
-				<div class="product">
-					<div class="product-image">
-						<a href="#">
-							<img class="pic-1" src="../images/article/home/img-3.jpg">
-							<img class="pic-2" src="../images/article/home/img-4.jpg">
-						</a>
-						<ul class="social">
-							<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-							<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-						</ul>
-					</div>
-					<div class="product-content">
-						<h3 class="title"><a href="#">Blue T-shirt </a></h3>
-						<div class="price">
-							$20.50
-						</div>
-					</div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="product">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="../images/article/home/img-15.jpg">
-                        <img class="pic-2" src="../images/article/home/img-16.jpg">
-                    </a>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New !!</span>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                    <div class="price">
-                        $63.50
-                        <span>$75.00</span>
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-3.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-4.jpg" alt="shirt">
+                            <span class="product-new-label">NEW !!</span>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
                     </div>
+                    <div class="content">
+                        <h4>Men's T-Shirt</h4>
+                        <h6><b>$63.00</b> <s style="color: grey;">$75.00</s></h6>
+                    </div>   
                 </div>
             </div>
+
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-11.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-12.jpg" alt="shirt">
+                        
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's Blazer 1</h4>
+                        <h6><b>$51.00</b></h6>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-15.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-16.jpg" alt="shirt">
+                        
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's T-Shirt 2</h4>
+                        <h6><b>$53.00</b></h6>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-23.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-24.jpg" alt="shirt">
+                            <span class="product-new-label">NEW !!</span>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's T-Shirt 3</h4>
+                        <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
+                    </div>   
+                </div>
+            </div>            
+
         </div>
-        <div class="col-md-3">
-            <div class="product">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="../images/article/home/img-111.jpg">
-                        <img class="pic-2" src="../images/article/home/img-211.jpg">
-                    </a>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New !!</span>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                    <div class="price">
-                        $63.50
-                        <span>$75.00</span>
+        <br>
+        <div class="row">
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-25.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-26.jpg" alt="shirt">
+                            <span class="product-new-label">NEW !!</span>
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's Blazer 2</h4>
+                        <h6><b>$70.00</b> <s style="color: grey;">$61.00</s></h6>
+                    </div>   
                 </div>
             </div>
+
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-111.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-211.jpg" alt="shirt">
+                        
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's Blazer 3</h4>
+                        <h6><b>$59.00</b></h6>
+                    </div>   
+                </div>
+            </div>
+
+            <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-300.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-400.jpg" alt="shirt">
+                        
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's T-Shirt 4</h4>
+                        <h6><b>$62.00</b></h6>
+                    </div>   
+                </div>
+            </div>
+
+             <div class="col-md-3" >
+                <div class="produit">
+                    <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/homme/img-7.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/homme/img-8.jpg" alt="shirt">
+                        
+                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                    </div>
+                    <div class="content">
+                        <h4>Men's T-Shirt 5</h4>
+                        <h6><b>$69.00</b></h6>
+                    </div>   
+                </div>
+            </div>       
+
         </div>
     </div>
-</div>
 <hr>     
 </div>
 
-
-<!-- -------------------------------------------- article homme END ----------------------------------------------   -->
+<!-- -------------------------------------------- article FEMME END ----------------------------------------------   -->
 
 
 <!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
-<footer >
+<footer  >
     <div class="topsidefooter container">
         <div class="row">
             <div  class="col-lg-4">
