@@ -126,16 +126,17 @@
                 <div class="container">
                     <div class=" space" ></div>
                     <?php
-                        if(sizeof($_SESSION["achats"])>0)
+
+                        if(isset($_POST["cartitems"])&&sizeof($_POST["cartitems"])>0)
                         {
-                            foreach($_SESSION["achats"] as $obj)
+                            foreach($_POST["cartitems"] as $obj)
                             {
                                 echo("<div class='alert alert-success'>");
                                 echo("produit : ". $obj);
                                 echo("</div>");
                             }
                             echo('<button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button>');
-                            echo('<form action="annulerachat.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
+                            echo('<form action="index.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
                         }
                         else
                             echo("<div class='alert alert-danger'>Vous n'avez pas ajouté(e) des articles </div>");
