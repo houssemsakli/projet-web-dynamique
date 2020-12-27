@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
 </head>
 
-<body>
+<body >
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
 <header>
 		
@@ -112,115 +112,20 @@
 	</header>
 	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 
-
-
-<!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
-
-<!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
+<!-- -------------------------------------------- article FEMME BEGIN ----------------------------------------------   -->
 
 <div class="new">
-        <div class="container "><br><br>
-            <div class="text-center new-title-style" >Les Articles des Hommes</div>
-            <br><br>
-            <div class="row">
-				<div class="col-md-3">
-					<div class="product">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="../images/article/home/img-11.jpg">
-								<img class="pic-2" src="../images/article/home/img-12.jpg">
-							</a>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-								<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">New !!</span>
-						</div>
-						<div class="product-content">
-							<h3 class="title"><a href="#">Men's Blazer</a></h3>
-							<div class="price">
-								$63.50
-								<span>$75.00</span>
-							</div>
-						</div>
-				</div>
-			</div>
-			<div class="col-md-3" >
-				<div class="product">
-					<div class="product-image">
-						<a href="#">
-							<img class="pic-1" src="../images/article/home/img-3.jpg">
-							<img class="pic-2" src="../images/article/home/img-4.jpg">
-						</a>
-						<ul class="social">
-							<li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-							<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-						</ul>
-					</div>
-					<div class="product-content">
-						<h3 class="title"><a href="#">Blue T-shirt </a></h3>
-						<div class="price">
-							$20.50
-						</div>
-					</div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="product">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="../images/article/home/img-15.jpg">
-                        <img class="pic-2" src="../images/article/home/img-16.jpg">
-                    </a>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New !!</span>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                    <div class="price">
-                        $63.50
-                        <span>$75.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="product">
-                <div class="product-image">
-                    <a href="#">
-                        <img class="pic-1" src="../images/article/home/img-111.jpg">
-                        <img class="pic-2" src="../images/article/home/img-211.jpg">
-                    </a>
-                    <ul class="social">
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                    </ul>
-                    <span class="product-new-label">New !!</span>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="#">Men's Blazer</a></h3>
-                    <div class="price">
-                        $63.50
-                        <span>$75.00</span>
-                </div>
-            </div>
-        </div>
+    <div class="article">
+    
+    
     </div>
 </div>
-<hr>     
-</div>
 
-
-<!-- -------------------------------------------- article homme END ----------------------------------------------   -->
+<!-- -------------------------------------------- article FEMME END ----------------------------------------------   -->
 
 
 <!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
-<footer >
+<footer  >
     <div class="topsidefooter container">
         <div class="row">
             <div  class="col-lg-4">
