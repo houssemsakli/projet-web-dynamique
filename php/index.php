@@ -171,18 +171,21 @@
 <div class="new">
 	<div class="container "><br>
 		<div class="row">
-			<div class="col-md-12 text-center new-title-style" >Zoom sur les promotions</div> 
+			<div class="col-md-12 text-center new-title-style" >Vos avis nous intéresse</div> 
 		</div><br><br>
 		<div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! 
-					<img class="img-bigger" src="../images/c2.png" alt="shirt">
+			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img src="../images/Avis/Baha.jpg" style="border-radius : 100px;" width="50" height="50" alt="shirt"><br>-Baha kaabaoui-<br> <br>
+			<< Grande variété de marques et expédition rapide. Je commande auprès d'autres grossistes pour mon entreprise et je viens de trouver ce site.C'est génial car certains de mes grossistes ne proposent pas toutes les marques sur un seul site.Merci! >>
+					
 				</div>
 			</div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! 
-				<img class="img-bigger" src="../images/c2.png" alt="shirt">
+			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img  src="../images/Avis/rami.jpg"   style="border-radius : 100px;"  width="50" height="50" alt="shirt"><br>-Rami Ferjani-<br><br><< 
+J'étais sûr que la chemise que j'avais commandée de ce magasin de vêtements devait être une imitation, mais après la livraison rapide et la vérification de la qualité, j'étais ravie, commande rapide, livraison plus rapide et article comme décrit !! >><br>-Rami Ferjani-<br><br>
+				
 			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! 
-				<img class="img-bigger" src="../images/c2.png" alt="shirt">
+			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img  src="../images/Avis/Dali.jpg" style="border-radius : 100px;" width="50" height="50"  alt="shirt"><br>-Dali Harroum-<br><br><<
+J'ai acheté 3 t-shirts à manches longues pour la première fois auprès de votre entreprise. J'ai été très satisfait de la qualité et de la rapidité avec laquelle la commande est arrivée. Le prix était extrêmement raisonnable et j'utiliserai à nouveau cette société. >>
+				
 			</div></div> 
 		</div><br>
 	</div>
