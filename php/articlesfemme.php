@@ -116,140 +116,231 @@
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 
-<div class="new">
-
-    <div class="container "><br><br>
-        <div class="text-center new-title-style" >Les Articles des Hommes</div>
-        <br><br>
-        <div class="row">
-			<div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-3.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-4.jpg" alt="shirt">
-                            <span class="product-new-label">NEW !!</span>
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's T-Shirt</h4>
-                        <h6><b>$63.00</b> <s style="color: grey;">$75.00</s></h6>
-                    </div>   
-                </div>
-            </div>
-
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-11.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-12.jpg" alt="shirt">
+<form name="f" method="post" action="mesachats.php" >
+    
+    <div class="new">
+        <div class="container "><br><br><br>
+            
+            <div class="row">
+                <div class="col-md-12 text-center new-title-style" >Les Articles des Femmes</div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/femme/img-1.jpeg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/femme/img-2.jpeg" alt="shirt">
                         
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pull 1','55.00',this); nbrachats();">
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                <ul class="d-none" name="cartitems" id="cartitems">
+                                </ul>
+                                
+                            <?php
+                            }?>                   
+                        </div>
+                        <div class="content">
+                            <h4>Pull 1</h4>
+                            <h6><b>$55.00</b></h6>
+                        </div>   
                     </div>
-                    <div class="content">
-                        <h4>Men's Blazer 1</h4>
-                        <h6><b>$51.00</b></h6>
-                    </div>   
+                </div>
+                    
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/femme/img-1.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/femme/img-2.jpg" alt="shirt">
+                            <span class="product-new-label">NOUVEAU</span>
+
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pull 2','61.00',this); nbrachats();" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                
+                            <?php
+                            }?>               
+                        </div>
+                        <div class="content">
+                            <h4>Pull 2</h4>
+                            <h6><b>$61.00</b> <s style="color: grey;">$72.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/femme/img-3.jpeg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/femme/img-4.jpeg" alt="shirt">
+                            <span class="product-new-label">NOUVEAU</span>
+
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pull 3','68.00',this); nbrachats();" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                
+                            <?php
+                            }?>               
+                        </div>
+                        <div class="content">
+                            <h4>Pull 3</h4>
+                            <h6><b>$68.00</b> <s style="color: grey;">$78.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/femme/img-5.jpeg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/femme/img-6.jpeg" alt="shirt">
+                                <span class="product-new-label">NOUVEAU</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 4','57.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                  
+                        </div>
+                        <div class="content">
+                            <h4>Pull 4</h4>
+                            <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
+                        </div>   
+                    </div>
+                </div>   
+                
+            </div>
+            <div class="row">
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/femme/img-5.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/femme/img-6.jpg" alt="shirt">
+                                <span class="product-new-label">NOUVEAU</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 5','73.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                     
+                        </div>
+                        <div class="content">
+                            <h4>Pull 5</h4>
+                            <h6><b>$73.00</b> <s style="color: grey;">$85.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/femme/img-7.jpeg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/femme/img-8.jpeg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 6','64.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                     
+                        </div>
+                        <div class="content">
+                            <h4>Pull 6</h4>
+                            <h6><b>$64.00</b></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/femme/img-17.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/femme/img-18.jpg" alt="shirt">
+                                <span class="product-new-label">NOUVEAU</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 7','58.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                  
+                        </div>
+                        <div class="content">
+                            <h4>Pull 7</h4>
+                            <h6><b>$58.00</b> <s style="color: grey;">$64.00</s></h6>
+                        </div>   
+                    </div>
+                </div>   
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/femme/img-21.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/femme/img-22.jpg" alt="shirt">
+                            
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 8','77.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+                                <?php
+                                }?>                     
+                        </div>
+                        <div class="content">
+                            <h4>Pull 8</h4>
+                            <h6><b>$77.00</b></h6>
+                        </div>   
+                    </div>
+                </div>       
+
+            </div><br><br>
+
+            <?php 
+            if(sizeof($_SESSION)>0)
+            { ?>            
+            <div class="row" >
+                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->                    
+                    <button class="button" onclick="totalachats(); totalnombre();">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div style="position:absolute;right:25px;top:-8px;"id="nbrachats" > 0</div>
+                    </button>
                 </div>
             </div>
-
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-15.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-16.jpg" alt="shirt">
-                        
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's T-Shirt 2</h4>
-                        <h6><b>$53.00</b></h6>
-                    </div>   
-                </div>
-            </div>
-
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-23.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-24.jpg" alt="shirt">
-                            <span class="product-new-label">NEW !!</span>
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's T-Shirt 3</h4>
-                        <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
-                    </div>   
-                </div>
-            </div>            
-
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-25.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-26.jpg" alt="shirt">
-                            <span class="product-new-label">NEW !!</span>
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's Blazer 2</h4>
-                        <h6><b>$70.00</b> <s style="color: grey;">$61.00</s></h6>
-                    </div>   
-                </div>
-            </div>
-
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-111.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-211.jpg" alt="shirt">
-                        
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's Blazer 3</h4>
-                        <h6><b>$59.00</b></h6>
-                    </div>   
-                </div>
-            </div>
-
-            <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-300.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-400.jpg" alt="shirt">
-                        
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's T-Shirt 4</h4>
-                        <h6><b>$62.00</b></h6>
-                    </div>   
-                </div>
-            </div>
-
-             <div class="col-md-3" >
-                <div class="produit">
-                    <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-7.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-8.jpg" alt="shirt">
-                        
-                            <a href="#"><i class="fa fa-shopping-cart"></i></a>                 
-                    </div>
-                    <div class="content">
-                        <h4>Men's T-Shirt 5</h4>
-                        <h6><b>$69.00</b></h6>
-                    </div>   
-                </div>
-            </div>       
-
+            <?php
+            }?>   
         </div>
     </div>
-<hr>     
-</div>
-
+    <input class="d-none" type="text" name="totalprix">
+    <input class="d-none" type="text" name="totalnbr">
+</form>
 <!-- -------------------------------------------- article FEMME END ----------------------------------------------   -->
 
 
@@ -310,6 +401,32 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
+    var totalprix=0;
+    var totalnbr=0;
+    function addcartitems(clicked_id,clicked_prix,th)
+    {
+        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"<b>&nbsp;&nbsp;&nbsp;&nbsp; Prix: </b> $"+clicked_prix+"'/></li>" ;
+        th.classList.add('d-none');
+        totalprix=totalprix+parseInt(clicked_prix);
+        totalnbr=totalnbr+1;
+        //document.getElementById(clicked_id).classList.add('d-none');
+    }
+
+    function nbrachats()
+    {
+        document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
+    }
+
+    function totalachats()
+    {
+        document.f.totalprix.value=totalprix;
+    }
+
+    function totalnombre()
+    {
+        document.f.totalnbr.value=totalnbr;
+    }
+
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top
