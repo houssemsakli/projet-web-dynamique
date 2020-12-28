@@ -29,7 +29,7 @@
 		
 		<div class=" shadow  mb-5  rounded">
 			<nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark row ">
-				<div class="container ">
+				<div class="container-fluid" style="margin-left: 70px; margin-right: 70px;">
 					<a class="navbar-brand" href="index.php"><img src="../images\binco.png" alt="BINCO"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
