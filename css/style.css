@@ -1,24 +1,20 @@
 
-
 body{
 	padding: 0;
 	margin: 0;
 	background-color: #95a5a6;
 	font-family: 'Ubuntu', sans-serif;
 }
-
 .redcolor {
 	color : #BE3144; 
 	font-size: 30px;
 	font-weight:bold;
-	
 }
 .navbar-brand img
 {
 	margin-top:-12px;
 	width: 100px;
 }
-
 /*-------------------------- CAROUSEL --------------------------*/
 .carousel-inner h2
 { 
@@ -31,7 +27,6 @@ body{
     line-height: inherit;
     margin: 70px;font-style: initial;
 }
-
 .redeffect{
     width: 1%;
     height: 50%;
@@ -45,16 +40,6 @@ body{
 .redeffectanimation {
     width: 42%;
 }
-/*.carousel-inner h2 span
-{
-    background-color: #BE3144;
-    color: white;
-    height:20px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-
-}*/
 .imheight{
 	max-height: 100vh;
 }
@@ -79,7 +64,6 @@ body{
     align-items: center;
     justify-content: left;
 }
-
 /*-------------------------- ****** --------------------------*/
 /*-------------------------- nouveautés  --------------------------*/
 .nouvsection{
@@ -87,12 +71,10 @@ body{
 	height: 500px;
 	transition: 0.8s;
 }
-
 .animboxnouv{
 	opacity: 0;
 	transition: 1.3s; 
 }
-
 .nouv-title-style{
 	font-size: 40px;
 	margin-top: 20px;
@@ -113,7 +95,6 @@ body{
 	color : white ; 
 	
 }
-
 /*-------------------------- ****** --------------------------*/
 /*-------------------------- promo  --------------------------*/
 .promo{
@@ -145,7 +126,6 @@ body{
 	border-radius: 5px;
 	color : black ; 
 }
-
 /*-------------------------- ****** --------------------------*/
 /*-------------------------- new Section   --------------------------*/
 .new{
@@ -167,6 +147,7 @@ body{
 	margin : 10px;
 	height: 400px;
 	transition : 0.4s ; 
+	position: relative;
 }
 .boxnew:hover {
 	height:400px;
@@ -174,7 +155,6 @@ body{
 	border-radius: 5px;
 	color : black ; 
 }
-
 .boxnew:hover .img-bigger{
 	width: 210px;
 	height: 225px;
@@ -259,12 +239,12 @@ footer{
 .Copyright
 {
 	background-color:#1D2935 ;
-	 padding:10px;
-	 margin : 0px;
-	 color: white;
-	 text-align: center;
-	 position : relative ;
-	 bottom : 0px;
+	padding:10px;
+	margin : 0px;
+	color: white;
+	text-align: center;
+	position : relative ;
+	bottom : 0px;
 }	
 /*-------------------------- ****** --------------------------*/
 /*--------------------section Animation ----------------------*/
@@ -277,4 +257,22 @@ footer{
 /*-------------------------- ****** --------------------------*/
 .form-check-label{
 	color: grey;
+}
+.coments{
+	background-color:#FFD933 ;
+	position : absolute ; color : black ; 
+	top : 20px;
+	left : 0px;
+	width:220px ;
+	height: 70px;
+	border-top-right-radius: 100px;
+	border-bottom-right-radius:  100px;
+	font-size: 20px;
+	text-align: left;
+	padding : 4px;
+	transition : 0.4s;
+}
+
+.boxnew:hover .coments{
+	background-color:white ;
 }
