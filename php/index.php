@@ -174,19 +174,44 @@
 			<div class="col-md-12 text-center new-title-style" >Vos avis nous intéresse</div> 
 		</div><br><br>
 		<div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img src="../images/Avis/Baha.jpg" style="border-radius : 100px;" width="50" height="50" alt="shirt"><br>-Baha kaabaoui-<br> <br>
-			<< Grande variété de marques et expédition rapide. Je commande auprès d'autres grossistes pour mon entreprise et je viens de trouver ce site.C'est génial car certains de mes grossistes ne proposent pas toutes les marques sur un seul site.Merci! >>
-					
+		
+			<div class="col-md-4 ">
+				<div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">
+					<div class="coments" style="">
+						<span style="position:absolute;top:20px">Baha kaabaoui</span>
+						<img src="../images/Avis/Baha.jpg" style="border-radius : 100px;position:absolute;right:5px" width="60"height="60"alt="shirt">
+					</div>
+					<span style="position : absolute;bottom:80px;left : 20px;right:20px;">
+					<< Grande variété de marques et expédition rapide. Je commande auprès d'autres grossistes pour mon entreprise et je viens de trouver ce site.C'est génial car certains de mes grossistes ne proposent pas toutes les marques sur un seul site.Merci! >>	
+					</span>
+				
 				</div>
 			</div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img  src="../images/Avis/rami.jpg"   style="border-radius : 100px;"  width="50" height="50" alt="shirt"><br>-Rami Ferjani-<br><br><< 
-J'étais sûr que la chemise que j'avais commandée de ce magasin de vêtements devait être une imitation, mais après la livraison rapide et la vérification de la qualité, j'étais ravie, commande rapide, livraison plus rapide et article comme décrit !! >><br>-Rami Ferjani-<br><br>
-				
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center"><img  src="../images/Avis/Dali.jpg" style="border-radius : 100px;" width="50" height="50"  alt="shirt"><br>-Dali Harroum-<br><br><<
-J'ai acheté 3 t-shirts à manches longues pour la première fois auprès de votre entreprise. J'ai été très satisfait de la qualité et de la rapidité avec laquelle la commande est arrivée. Le prix était extrêmement raisonnable et j'utiliserai à nouveau cette société. >>
-				
-			</div></div> 
+
+			<div class="col-md-4 ">
+				<div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">
+					
+					<div class="coments" style="">
+						<span style="position:absolute;top:20px">Rami ferjani</span>
+						<img src="../images/Avis/rami.jpg" style="border-radius : 100px;position:absolute;right:5px" width="60"height="60"alt="shirt">
+					</div>
+					<span style="position : absolute;bottom:80px;left : 21px;right:21px;">
+					<< J'étais sûr que la chemise que j'avais commandée de ce magasin de vêtements devait être une imitation, mais après la livraison rapide et la vérification de la qualité, j'étais ravie, commande rapide, livraison plus rapide et article comme décrit !! >>
+					</span>
+				</div>
+			</div>
+			
+			<div class="col-md-4 ">
+				<div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">
+				<div class="coments" style="">
+						<span style="position:absolute;top:20px">Dali Harroum</span>
+						<img src="../images/Avis/Dali.jpg" style="border-radius : 100px;position:absolute;right:5px" width="60"height="60"alt="shirt">
+					</div>	
+					<span style="position : absolute;bottom:80px;left : 21px;right:21px;">
+						<< J'ai acheté 3 t-shirts à manches longues pour la première fois auprès de votre entreprise. J'ai été très satisfait de la qualité et de la rapidité avec laquelle la commande est arrivée. Le prix était extrêmement raisonnable et j'utiliserai à nouveau cette société. >>
+					</span>
+				</div>
+			</div> 
 		</div><br>
 	</div>
 </div>
@@ -250,8 +275,8 @@ J'ai acheté 3 t-shirts à manches longues pour la première fois auprès de vot
 		</div>
 		<a id="contactref"></a>
 	</footer>
-	<!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
-	<!-- ------------------------------------------ JQUERY BEGIN ----------------------------------------------   -->
+<!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
+<!-- ------------------------------------------ JQUERY BEGIN ----------------------------------------------   -->
 	<script>
 		$('.cont').click(function() {
 			$('html,body').animate({
