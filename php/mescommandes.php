@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Articles [Enfant]</title>
+	<title>Mes Commandes</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="icon" href="../images/favicon.png">
-
+  
     <script src="../js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="../js/popper.min.js" ></script><!-- BOOTSTRAP -->
-	<script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../s/popper.min.js" ></script><!-- BOOTSTRAP -->  
+    <script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
     <script src="../js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
-
+	
 	<link rel="stylesheet" href="../css/bootstrap.min.css"><!-- BOOTSTRAP -->
 
-
+	
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
 
 
 	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/connexioninscri_style.css" type="text/css"> 
 </head>
 
-<body>
+<body onload="incheight()">
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
     <header>
         
@@ -69,7 +69,7 @@
                     echo( $_SESSION["nom"]);
                 ?>
                             </a></li>
-                            <li class="nav-item" >
+                            <li class="nav-item active" >
                                 <a class="nav-link"  href="mescommandes.php" >Mes Commandes</a>
                             </li>                                                       
                             <!-- DEONNEXION-->
@@ -81,7 +81,7 @@
                 }else {  
                 ?>
                             <ul class="navbar-nav col-md-9">
-                                <li class="nav-item active">
+                                <li class="nav-item">
                                     <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -118,168 +118,44 @@
 
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
+	
+<!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
+<div style="height: 550px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
+	<div class="container "  ><br><br>
+		<div class="row">
+			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mes Commandes</div> 
+		</div><br>
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 290px; position: relative;">
+                <div class="container">
+                    <div class=" space" ></div>
+                        <?php 
+                            $con = MySQLi_connect("localhost","root","") ;
+                            MySQLi_select_db($con,"bincoDb") ;
+                            $x=$_SESSION['email'];
+                            $req = "select * from commandes where email='$x' ";
+                            $res = MySQLi_query($con,$req);
+                            
+                            if(mysqli_num_rows($res) != 0)
+                            {
 
-
-<!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
-
-<form name="f" method="post" action="mesachats.php" >
-    
-    <div class="new">
-        <div class="container "><br><br><br>
-            
-            <div class="row">
-                <div class="col-md-12 text-center new-title-style" >Les Articles des Enfants</div>
-            </div><br>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-1.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-2.jpg" alt="shirt">
-                        
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pyjama 1','35.00',this); nbrachats();">
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                <ul class="d-none" name="cartitems" id="cartitems">
-                                </ul>
-                                
-                            <?php
-                            }?>                   
-                        </div>
-                        <div class="content">
-                            <h4>Pyjama 1</h4>
-                            <h6><b>$35.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-                    
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-3.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-4.jpg" alt="shirt">
-                            <span class="product-new-label">NOUVEAU</span>
-
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pyjama 2','31.00',this); nbrachats();" >
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                
-                            <?php
-                            }?>               
-                        </div>
-                        <div class="content">
-                            <h4>Pyjama 2</h4>
-                            <h6><b>$31.00</b> <s style="color: grey;">$42.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-5.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-5.jpg" alt="shirt">
-
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pull 1','28.00',this); nbrachats();" >
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                
-                            <?php
-                            }?>               
-                        </div>
-                        <div class="content">
-                            <h4>Pull 1</h4>
-                            <h6><b>$28.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/enfant/img-6.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/enfant/img-7.jpg" alt="shirt">
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Pull 2','27.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                  
-                        </div>
-                        <div class="content">
-                            <h4>Pull 2</h4>
-                            <h6><b>$27.00</b></h6>
-                        </div>   
-                    </div>
-                </div>   
-                
-            </div>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/enfant/img-8.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/enfant/img-9.jpg" alt="shirt">
-                                <span class="product-new-label">NOUVEAU</span>
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Pull 3','23.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>Pull 3</h4>
-                            <h6><b>$23.00</b> <s style="color: grey;">$35.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-            </div><br><br>
-
-            <?php 
-            if(sizeof($_SESSION)>0)
-            { ?>            
-            <div class="row" >
-                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->                    
-                    <button class="button" onclick="totalachats(); totalnombre();">
-                        <i class="fa fa-shopping-cart"></i>
-                        <div style="position:absolute;right:25px;top:-8px;"id="nbrachats" > 0</div>
-                    </button>
+                                echo ('<div class="container">
+                                        <table style="text-align: left; width: 450px;"><tr><th style="text-align: left; width: 100px; color: #BE3144">ID</th><th style="text-align: left; width: 150px; color: #BE3144">PRIX TOTAL</th><th style="text-align: left; width: 200px; color: #BE3144">NOMBRE D&apos;ARTICLES</th></tr>');
+                                while($e=mysqli_fetch_array($res))
+                                {
+                                    echo('<tr><td>'.$e['id']."</td><td>$".$e[2].'</td><td>'.$e[3]."</td></tr>");
+                                }
+                                echo "</table></div>";
+                            }
+                            else
+                            {
+                                echo '<div class="alert alert-danger">Vous n&apos;avez pas des commandes !</div>';
+                            }
+                        ?>
                 </div>
             </div>
-            <?php
-            }?>   
-        </div>
-    </div>
-    <input class="d-none" type="text" name="totalprix">
-    <input class="d-none" type="text" name="totalnbr">
-</form>
-
-<!-- -------------------------------------------- article homme END ----------------------------------------------   -->
-
-
+	</div>
+</div>
+<!-- -------------------------------------------- Form END ----------------------------------------------   -->
 <!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
 <footer >
     <div class="topsidefooter container">
@@ -327,40 +203,29 @@
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div>		
         </div>
     </div>
     <div class="Copyright ">
-        <span class="redcolor">B I N C O</span> <br> © Copyright 2021
+        <span class="redcolor">B I N C O</span> <br> © Copyright 2021 
     </div>
     <a id="contactref"></a>
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
-    var totalprix=0;
-    var totalnbr=0;
-    function addcartitems(clicked_id,clicked_prix,th)
-    {
-        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"<b>&nbsp;&nbsp;&nbsp;&nbsp; Prix: </b> $"+clicked_prix+"'/></li>" ;
-        th.classList.add('d-none');
-        totalprix=totalprix+parseInt(clicked_prix);
-        totalnbr=totalnbr+1;
-        //document.getElementById(clicked_id).classList.add('d-none');
-    }
 
-    function nbrachats()
+    function increaseHeight()
     {
-        document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
-    }
-
-    function totalachats()
-    {
-        document.f.totalprix.value=totalprix;
-    }
-
-    function totalnombre()
-    {
-        document.f.totalnbr.value=totalnbr;
+        x = parseInt(document.getElementById("box-connexion").style.height)+10;
+        document.getElementById("box-connexion").style.height = x.toString()+"px";
+        
+        x2 = parseInt(document.getElementById("f").style.height)+10;
+        document.getElementById("f").style.height = x2.toString()+"px";
+    }  
+    function incheight(){
+        var TabInputs=document.getElementsByClassName('tablerows');
+        for (var i=0;i<TabInputs.length;i++)
+            increaseHeight();
     }
 
     $('.cont').click(function() {

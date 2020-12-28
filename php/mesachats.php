@@ -25,77 +25,80 @@
 
 <body onload="incheight()">
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
-<header>
-		
-		<div class="fixed-top shadow  mb-5  rounded">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
-				<div class="container ">
-					<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <header>
+        
+        <div class="fixed-top shadow  mb-5  rounded">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
+                <div class="container-fluid" style="margin-left: 70px; margin-right: 70px;">
+                    <a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <?php 
                 session_start();
                 if(sizeof($_SESSION)>0)
-				{ ?>
-							<ul class="navbar-nav col-md-7">
-								<li class="nav-item ">
-									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item dropdown ">
-									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Articles
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-										<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-										<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-									</div>
-								</li>
-								<li class="nav-item" >
-									<a class="nav-link cont" href="#" >Contactez-Nous</a>
-								</li>     			      			
-							</ul>
-							<ul class="col-md-5 navbar-nav " style="text-align: right">
+                { ?>
+                            <ul class="navbar-nav col-md-7">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Articles
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
+                                        <a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
+                                        <a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item" >
+                                    <a class="nav-link cont" href="#" >Contactez-Nous</a>
+                                </li>                               
+                            </ul>
+                            <ul class="col-md-5 navbar-nav "  style="margin-left: 10%;">
                             <!-- il y a  de session -->  
+                            <li class="nav-item active" >
+                                <a class="nav-link"  href="mesachats.php" ><i class="fa fa-shopping-cart"></i></a>
+                            </li>
                             <li>
                             <a class="nav-link" href="#" >
                 <?php
                     echo( $_SESSION["prenom"].' ');
                     echo( $_SESSION["nom"]);
                 ?>
-							</a></li>
-							
-							<li class="nav-item" >
-                                <a class="nav-link active"  href="mesachats.php" >Mes achats</a>
-                            </li>
+                            </a></li>
+                            <li class="nav-item" >
+                                <a class="nav-link"  href="mescommandes.php" >Mes Commandes</a>
+                            </li>                                                       
                             <!-- DEONNEXION-->
                             <li class="nav-item" >
                                 <a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
                             </li>
+
                 <?php
                 }else {  
-				?>
-							<ul class="navbar-nav col-md-9">
-								<li class="nav-item ">
-									<a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									Articles
-									</a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-										<a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-										<a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-									</div>
-								</li>
-								<li class="nav-item" >
-									<a class="nav-link cont" href="#" >Contactez-Nous</a>
-								</li>     			      			
-							</ul>
-							<ul class="col-md-3 navbar-nav " style="text-align: right">
+                ?>
+                            <ul class="navbar-nav col-md-9">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Articles
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
+                                        <a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
+                                        <a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item" >
+                                    <a class="nav-link cont" href="#" >Contactez-Nous</a>
+                                </li>                               
+                            </ul>
+                            <ul class="col-md-3 navbar-nav " style="text-align: right">
                             <!-- il y a pas de session -->    
                             <li class="nav-item" >
                                 <a class="nav-link" href="../inscription.html" >Inscription</a>
@@ -104,12 +107,12 @@
                                 <a class="nav-link" href="../php/connexion.php" >Connexion</a>
                             </li>
                 <?php }?>  
-						</ul>    	
-					</div>
-			</div>
-			</nav>
-		</div>
-	</header>
+                        </ul>       
+                    </div>
+            </div>
+            </nav>
+        </div>
+    </header>
 	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 
 
@@ -120,13 +123,12 @@
 <div style="height: 550px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
 	<div class="container "  ><br><br>
 		<div class="row">
-			<div class="col-md-12 text-center nouv-title-style form-title-style" >La liste des achats </div> 
+			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mon Panier</div> 
 		</div><br>
             <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 290px; position: relative;">
                 <div class="container">
                     <div class=" space" ></div>
                     <?php
-
                         if(isset($_POST["cartitems"])&&sizeof($_POST["cartitems"])>0)
                         {
                             foreach($_POST["cartitems"] as $obj)
@@ -136,7 +138,11 @@
                                 echo("</div>");
                             }
                             echo ('<div class="alert alert-primary" style="width: 438px; bottom: 140px; position: absolute;"><b>NOMBRE DE PRODUITS: </b>'.$_POST["totalnbr"].' &nbsp;&nbsp;&nbsp;<b>TOTAL: </b> $'.$_POST["totalprix"]."</div>");
-                            echo('<button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button>');
+                            echo('<form method="post" action="commander.php">
+                                <input type="hidden" name="prixtotal" value="'.$_POST["totalprix"].'" />
+                                <input type="hidden" name="nbrtotal" value="'.$_POST["totalnbr"].'" />
+                                <input type="hidden" name="emailco" value="'.$_SESSION["email"].'" />
+                                <button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button></form>');
                             echo('<form action="index.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
                         }
                         else
