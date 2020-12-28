@@ -28,7 +28,7 @@
 		
 		<div class="fixed-top shadow  mb-5  rounded">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark row ">
-				<div class="container ">
+				<div class="container-fluid" style="margin-left: 70px; margin-right: 70px;">
 					<a class="navbar-brand" href="../php/index.php"><img src="../images/binco.png" alt="BINCO"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -56,8 +56,11 @@
 									<a class="nav-link cont" href="#" >Contactez-Nous</a>
 								</li>     			      			
 							</ul>
-							<ul class="col-md-5 navbar-nav " style="text-align: right">
+							<ul class="col-md-5 navbar-nav "  style="margin-left: 10%;">
                             <!-- il y a  de session -->  
+                            <li class="nav-item" >
+                                <a class="nav-link"  href="mesachats.php" ><i class="fa fa-shopping-cart"></i></a>
+                            </li>
                             <li>
                             <a class="nav-link" href="#" >
                 <?php
@@ -65,14 +68,14 @@
                     echo( $_SESSION["nom"]);
                 ?>
 							</a></li>
-							
-							<li class="nav-item" >
-                                <a class="nav-link"  href="#" >Mes achats</a>
-                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link"  href="mescommandes.php" >Mes Commandes</a>
+                            </li>														
                             <!-- DEONNEXION-->
                             <li class="nav-item" >
                                 <a class="nav-link" style="color : #BE3144" href="deconnexion.php" >Déconnexion</a>
                             </li>
+
                 <?php
                 }else {  
 				?>

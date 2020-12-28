@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Connexion</title>
+	<title>Mes Commandes</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -59,7 +59,7 @@
                             </ul>
                             <ul class="col-md-5 navbar-nav "  style="margin-left: 10%;">
                             <!-- il y a  de session -->  
-                            <li class="nav-item active" >
+                            <li class="nav-item" >
                                 <a class="nav-link"  href="mesachats.php" ><i class="fa fa-shopping-cart"></i></a>
                             </li>
                             <li>
@@ -69,7 +69,7 @@
                     echo( $_SESSION["nom"]);
                 ?>
                             </a></li>
-                            <li class="nav-item" >
+                            <li class="nav-item active" >
                                 <a class="nav-link"  href="mescommandes.php" >Mes Commandes</a>
                             </li>                                                       
                             <!-- DEONNEXION-->
@@ -123,36 +123,34 @@
 <div style="height: 550px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
 	<div class="container "  ><br><br>
 		<div class="row">
-			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mon Panier</div> 
+			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mes Commandes</div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 250px; position: relative;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 290px; position: relative;">
                 <div class="container">
                     <div class=" space" ></div>
-                    <?php
-                        if(isset($_POST["cartitems"])&&sizeof($_POST["cartitems"])>0)
-                        {
-                            foreach($_POST["cartitems"] as $obj)
+                        <?php 
+                            $con = MySQLi_connect("localhost","root","") ;
+                            MySQLi_select_db($con,"bincoDb") ;
+                            $x=$_SESSION['email'];
+                            $req = "select * from commandes where email='$x' ";
+                            $res = MySQLi_query($con,$req);
+                            
+                            if(mysqli_num_rows($res) != 0)
                             {
-                                echo("<div class='alert alert-success'>");
-                                echo("produit : ". $obj);
-                                echo("</div>");
+
+                                echo ('<div class="container">
+                                        <table style="text-align: left; width: 450px;"><tr><th style="text-align: left; width: 100px; color: #BE3144">ID</th><th style="text-align: left; width: 150px; color: #BE3144">PRIX TOTAL</th><th style="text-align: left; width: 200px; color: #BE3144">NOMBRE D&apos;ARTICLES</th></tr>');
+                                while($e=mysqli_fetch_array($res))
+                                {
+                                    echo('<tr><td>'.$e['id']."</td><td>$".$e[2].'</td><td>'.$e[3]."</td></tr>");
+                                }
+                                echo "</table></div>";
                             }
-<<<<<<< HEAD
-                            echo('<button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button>');
-=======
-                            echo ('<div class="alert alert-primary" style="width: 438px; bottom: 140px; position: absolute;"><b>NOMBRE DE PRODUITS: </b>'.$_POST["totalnbr"].' &nbsp;&nbsp;&nbsp;<b>TOTAL: </b> $'.$_POST["totalprix"]."</div>");
-                            echo('<form method="post" action="commander.php">
-                                <input type="hidden" name="prixtotal" value="'.$_POST["totalprix"].'" />
-                                <input type="hidden" name="nbrtotal" value="'.$_POST["totalnbr"].'" />
-                                <input type="hidden" name="emailco" value="'.$_SESSION["email"].'" />
-                                <button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button></form>');
->>>>>>> 924f782 (Added mescommandes.php and fixed header)
-                            echo('<form action="index.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
-                        }
-                        else
-                            echo("<div class='alert alert-danger'>Vous n'avez pas ajouté(e) des articles </div>");
-                           
-                    ?>
+                            else
+                            {
+                                echo '<div class="alert alert-danger">Vous n&apos;avez pas des commandes !</div>';
+                            }
+                        ?>
                 </div>
             </div>
 	</div>
@@ -218,14 +216,14 @@
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("box-connexion").style.height)+60;
+        x = parseInt(document.getElementById("box-connexion").style.height)+10;
         document.getElementById("box-connexion").style.height = x.toString()+"px";
         
-        x2 = parseInt(document.getElementById("f").style.height)+60;
+        x2 = parseInt(document.getElementById("f").style.height)+10;
         document.getElementById("f").style.height = x2.toString()+"px";
     }  
     function incheight(){
-        var TabInputs=document.getElementsByClassName('alert alert-success');
+        var TabInputs=document.getElementsByClassName('tablerows');
         for (var i=0;i<TabInputs.length;i++)
             increaseHeight();
     }
