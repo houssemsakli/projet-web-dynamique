@@ -44,7 +44,7 @@
                                     <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Articles
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -78,35 +78,8 @@
                             </li>
 
                 <?php
-                }else {  
+                } 
                 ?>
-                            <ul class="navbar-nav col-md-9">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Articles
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-                                        <a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-                                        <a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item" >
-                                    <a class="nav-link cont" href="#" >Contactez-Nous</a>
-                                </li>                               
-                            </ul>
-                            <ul class="col-md-3 navbar-nav " style="text-align: right">
-                            <!-- il y a pas de session -->    
-                            <li class="nav-item" >
-                                <a class="nav-link" href="../inscription.html" >Inscription</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link" href="../php/connexion.php" >Connexion</a>
-                            </li>
-                <?php }?>  
                         </ul>       
                     </div>
             </div>
@@ -120,7 +93,7 @@
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
-<div style="height: 550px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
+<div style="height: 600px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
 	<div class="container "  ><br><br>
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mon Panier</div> 
