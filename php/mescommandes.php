@@ -44,7 +44,7 @@
                                     <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Articles
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -78,35 +78,7 @@
                             </li>
 
                 <?php
-                }else {  
-                ?>
-                            <ul class="navbar-nav col-md-9">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="../php/index.php">Accueil <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Articles
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <a class="dropdown-item" href="../php/articleshomme.php">Homme</a>
-                                        <a class="dropdown-item" href="../php/articlesfemme.php">Femme</a>
-                                        <a class="dropdown-item" href="../php/articlesenfant.php">Enfant</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item" >
-                                    <a class="nav-link cont" href="#" >Contactez-Nous</a>
-                                </li>                               
-                            </ul>
-                            <ul class="col-md-3 navbar-nav " style="text-align: right">
-                            <!-- il y a pas de session -->    
-                            <li class="nav-item" >
-                                <a class="nav-link" href="../inscription.html" >Inscription</a>
-                            </li>
-                            <li class="nav-item" >
-                                <a class="nav-link" href="../php/connexion.php" >Connexion</a>
-                            </li>
-                <?php }?>  
+                }?>
                         </ul>       
                     </div>
             </div>
@@ -120,14 +92,14 @@
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
-<div style="height: 550px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
+<div style="height: 600px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
 	<div class="container "  ><br><br>
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mes Commandes</div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 290px; position: relative;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 230px; position: relative;">
                 <div class="container">
-                    <div class=" space" ></div>
+                    <div class=" space " ></div>
                         <?php 
                             $con = MySQLi_connect("localhost","root","") ;
                             MySQLi_select_db($con,"bincoDb") ;
@@ -139,10 +111,10 @@
                             {
 
                                 echo ('<div class="container">
-                                        <table style="text-align: left; width: 450px;"><tr><th style="text-align: left; width: 100px; color: #BE3144">ID</th><th style="text-align: left; width: 150px; color: #BE3144">PRIX TOTAL</th><th style="text-align: left; width: 200px; color: #BE3144">NOMBRE D&apos;ARTICLES</th></tr>');
+                                        <table style="text-align: center; width: 450px;"><tr><th style="text-align: center; width: 100px; color: #BE3144">ID</th><th style="text-align: center; width: 150px; color: #BE3144">PRIX TOTAL</th><th style="text-align: center; width: 200px; color: #BE3144">NOMBRE D&apos;ARTICLES</th></tr>');
                                 while($e=mysqli_fetch_array($res))
                                 {
-                                    echo('<tr><td>'.$e['id']."</td><td>$".$e[2].'</td><td>'.$e[3]."</td></tr>");
+                                    echo('<tr  class="tablerows" ><td>'.$e['id']."</td><td>$".$e[2].'</td><td>'.$e[3]."</td></tr>");
                                 }
                                 echo "</table></div>";
                             }
@@ -216,7 +188,7 @@
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("box-connexion").style.height)+10;
+        x = parseInt(document.getElementById("box-connexion").style.height)+18;
         document.getElementById("box-connexion").style.height = x.toString()+"px";
         
         x2 = parseInt(document.getElementById("f").style.height)+10;
@@ -225,7 +197,10 @@
     function incheight(){
         var TabInputs=document.getElementsByClassName('tablerows');
         for (var i=0;i<TabInputs.length;i++)
+        {
             increaseHeight();
+        }
+            
     }
 
     $('.cont').click(function() {
