@@ -14,17 +14,14 @@
 	
 	<link rel="stylesheet" href="../css/bootstrap.min.css"><!-- BOOTSTRAP -->
 
-	
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
-
 
 	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
     <link rel="stylesheet" href="../css/style.css" type="text/css"> 
     <link rel="stylesheet" href="../css/connexioninscri_style.css" type="text/css"> 
 </head>
-
 <body onload="incheight()">
-<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
+<!--------------------------------------------- NAVBAR BEGIN ------------------------------------------------>
     <header>
         
         <div class="fixed-top shadow  mb-5  rounded">
@@ -85,10 +82,7 @@
             </nav>
         </div>
     </header>
-	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
-
-
-
+<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
