@@ -137,17 +137,18 @@
                             <?php 
                             if(sizeof($_SESSION)>0)
                             { ?>
-                                <div onclick="addcartitems(this.id,this);nbrachats()" id="Mens Blazer 1" >
+                                <div onclick="addcartitems('Veste 1','51.00',this); nbrachats();">
                                     <a ><i class="fa fa-shopping-cart"></i></a>     
                                 </div>
 
                                 <ul class="d-none" name="cartitems" id="cartitems">
                                 </ul>
+                                
                             <?php
                             }?>                   
                         </div>
                         <div class="content">
-                            <h4>Men's Blazer 1</h4>
+                            <h4>Veste 1</h4>
                             <h6><b>$51.00</b></h6>
                         </div>   
                     </div>
@@ -158,12 +159,12 @@
                         <div class="bg-white rounded"  >
                             <img class="img1 product-image" src="../images/article/homme/img-3.jpg" alt="shirt">
                             <img class="img2 imgbox" src="../images/article/homme/img-4.jpg" alt="shirt">
-                            <span class="product-new-label">NEW !!</span>
+                            <span class="product-new-label">NOUVEAU</span>
 
                             <?php 
                             if(sizeof($_SESSION)>0)
                             { ?>
-                                <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                <div onclick="addcartitems('T-Shirt 1','63.00',this); nbrachats();" >
                                     <a ><i class="fa fa-shopping-cart"></i></a>     
                                 </div>
 
@@ -172,7 +173,7 @@
                             }?>               
                         </div>
                         <div class="content">
-                            <h4>Men's T-Shirt</h4>
+                            <h4>T-Shirt 1</h4>
                             <h6><b>$63.00</b> <s style="color: grey;">$75.00</s></h6>
                         </div>   
                     </div>
@@ -187,7 +188,7 @@
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('T-Shirt 2','53.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
 
@@ -196,7 +197,7 @@
                                 }?>               
                         </div>
                         <div class="content">
-                            <h4>Men's T-Shirt 2</h4>
+                            <h4>T-Shirt 2</h4>
                             <h6><b>$53.00</b></h6>
                         </div>   
                     </div>
@@ -207,11 +208,11 @@
                         <div class="bg-white rounded"  >
                                 <img class="img1 product-image" src="../images/article/homme/img-23.jpg" alt="shirt">
                                 <img class="img2 imgbox" src="../images/article/homme/img-24.jpg" alt="shirt">
-                                <span class="product-new-label">NEW !!</span>
+                                <span class="product-new-label">NOUVEAU</span>
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('Veste 2','57.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
 
@@ -220,7 +221,7 @@
                                 }?>                  
                         </div>
                         <div class="content">
-                            <h4>Men's T-Shirt 3</h4>
+                            <h4>Veste 2</h4>
                             <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
                         </div>   
                     </div>
@@ -233,11 +234,11 @@
                         <div class="bg-white rounded"  >
                                 <img class="img1 product-image" src="../images/article/homme/img-25.jpg" alt="shirt">
                                 <img class="img2 imgbox" src="../images/article/homme/img-26.jpg" alt="shirt">
-                                <span class="product-new-label">NEW !!</span>
+                                <span class="product-new-label">NOUVEAU</span>
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('Veste 3','70.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
 
@@ -246,8 +247,8 @@
                                 }?>                     
                         </div>
                         <div class="content">
-                            <h4>Men's Blazer 2</h4>
-                            <h6><b>$70.00</b> <s style="color: grey;">$61.00</s></h6>
+                            <h4>Veste 3</h4>
+                            <h6><b>$70.00</b> <s style="color: grey;">$82.00</s></h6>
                         </div>   
                     </div>
                 </div>
@@ -261,7 +262,7 @@
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('Veste 4','59.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
 
@@ -270,7 +271,7 @@
                                 }?>                     
                         </div>
                         <div class="content">
-                            <h4>Men's Blazer 3</h4>
+                            <h4>Veste 4</h4>
                             <h6><b>$59.00</b></h6>
                         </div>   
                     </div>
@@ -285,14 +286,14 @@
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('T-Shirt 3','62.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
                                 <?php
                                 }?>                     
                         </div>
                         <div class="content">
-                            <h4>Men's T-Shirt 4</h4>
+                            <h4>T-Shirt 3</h4>
                             <h6><b>$62.00</b></h6>
                         </div>   
                     </div>
@@ -307,14 +308,14 @@
                                 <?php 
                                 if(sizeof($_SESSION)>0)
                                 { ?>
-                                    <div onclick="addcartitems(this.id,this);nbrachats()" id="trikou" >
+                                    <div onclick="addcartitems('T-Shirt 4','69.00',this); nbrachats();" >
                                         <a ><i class="fa fa-shopping-cart"></i></a>     
                                     </div>
                                 <?php
                                 }?>                     
                         </div>
                         <div class="content">
-                            <h4>Men's T-Shirt 5</h4>
+                            <h4>T-Shirt 4</h4>
                             <h6><b>$69.00</b></h6>
                         </div>   
                     </div>
@@ -322,18 +323,23 @@
 
             </div><br><br>
 
-            
+            <?php 
+            if(sizeof($_SESSION)>0)
+            { ?>            
             <div class="row" >
-                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->
-                    <button class="button">
-                        <i class="fa fa-shopping-cart"></i> <div style="position:absolute;right:22px;top:0px;"id="nbrachats" > 0</div>
+                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->                    
+                    <button class="button" onclick="totalachats(); totalnombre();">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div style="position:absolute;right:25px;top:-8px;"id="nbrachats" > 0</div>
                     </button>
                 </div>
             </div>
-
-
+            <?php
+            }?>   
         </div>
     </div>
+    <input class="d-none" type="text" name="totalprix">
+    <input class="d-none" type="text" name="totalnbr">
 </form>
 <!-- -------------------------------------------- article homme END ----------------------------------------------   -->
 
@@ -394,17 +400,30 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
-    
-    function addcartitems(clicked_id,th)
+    var totalprix=0;
+    var totalnbr=0;
+    function addcartitems(clicked_id,clicked_prix,th)
     {
-        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"'/></li>" ;
+        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"<b>&nbsp;&nbsp;&nbsp;&nbsp; Prix: </b> $"+clicked_prix+"'/></li>" ;
         th.classList.add('d-none');
+        totalprix=totalprix+parseInt(clicked_prix);
+        totalnbr=totalnbr+1;
         //document.getElementById(clicked_id).classList.add('d-none');
     }
 
     function nbrachats()
     {
         document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
+    }
+
+    function totalachats()
+    {
+        document.f.totalprix.value=totalprix;
+    }
+
+    function totalnombre()
+    {
+        document.f.totalnbr.value=totalnbr;
     }
 
     $('.cont').click(function() {

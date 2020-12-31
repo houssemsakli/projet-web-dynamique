@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Connexion</title>
+	<title>Mon Panier</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -98,7 +98,7 @@
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mon Panier</div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 250px; position: relative;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 290px; position: relative;">
                 <div class="container">
                     <div class=" space" ></div>
                     <?php
@@ -107,19 +107,15 @@
                             foreach($_POST["cartitems"] as $obj)
                             {
                                 echo("<div class='alert alert-success'>");
-                                echo("produit : ". $obj);
+                                echo('<b>Produit : </b>'. $obj);
                                 echo("</div>");
                             }
-<<<<<<< HEAD
-                            echo('<button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button>');
-=======
                             echo ('<div class="alert alert-primary" style="width: 438px; bottom: 140px; position: absolute;"><b>NOMBRE DE PRODUITS: </b>'.$_POST["totalnbr"].' &nbsp;&nbsp;&nbsp;<b>TOTAL: </b> $'.$_POST["totalprix"]."</div>");
                             echo('<form method="post" action="commander.php">
                                 <input type="hidden" name="prixtotal" value="'.$_POST["totalprix"].'" />
                                 <input type="hidden" name="nbrtotal" value="'.$_POST["totalnbr"].'" />
                                 <input type="hidden" name="emailco" value="'.$_SESSION["email"].'" />
                                 <button class="btn btn-outline-dark btn-lg btn-block" style="width: 438px; bottom: 95px; position: absolute;">Commander</button></form>');
->>>>>>> 924f782 (Added mescommandes.php and fixed header)
                             echo('<form action="index.php"><button type="submit" class="btn btn-outline-danger btn-lg btn-block" style="width: 438px; bottom: 30px; position: absolute;" >Annuler</button></form></div>');
                         }
                         else

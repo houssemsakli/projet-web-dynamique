@@ -123,53 +123,159 @@
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 
 
-<div class="new">
-	<div class="container "><br><br><br>
-		<div class="row">
-			<div class="col-md-12 text-center new-title-style" >Les Articles des Enfants</div>
-		</div><br><br>
-		<div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="imgbox" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
+<form name="f" method="post" action="mesachats.php" >
+    
+    <div class="new">
+        <div class="container "><br><br><br>
+            
+            <div class="row">
+                <div class="col-md-12 text-center new-title-style" >Les Articles des Enfants</div>
+            </div><br>
+            <div class="row">
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/enfant/img-1.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/enfant/img-2.jpg" alt="shirt">
+                        
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pyjama 1','35.00',this); nbrachats();">
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
 
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="i" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
+                                <ul class="d-none" name="cartitems" id="cartitems">
+                                </ul>
+                                
+                            <?php
+                            }?>                   
+                        </div>
+                        <div class="content">
+                            <h4>Pyjama 1</h4>
+                            <h6><b>$35.00</b></h6>
+                        </div>   
+                    </div>
+                </div>
+                    
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/enfant/img-3.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/enfant/img-4.jpg" alt="shirt">
+                            <span class="product-new-label">NOUVEAU</span>
 
-        </div><br>
-        <div class="row">
-			<div class="col-md-4 "><div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-					<img class="" src="../images/homme/im1.jpg" alt="shirt">
-				</div>
-			</div>
-			<div class="col-md-4"> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-			</div></div>
-			<div class="col-md-4 "> <div class="boxnew shadow p-3 mb-5 bg-white rounded text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident <br> <br> <br>
-				<img class="" src="../images/homme/im1.jpg" alt="shirt">
-            </div></div>
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pyjama 2','31.00',this); nbrachats();" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
 
-		</div><br>
-	</div>
-</div>
+                                
+                            <?php
+                            }?>               
+                        </div>
+                        <div class="content">
+                            <h4>Pyjama 2</h4>
+                            <h6><b>$31.00</b> <s style="color: grey;">$42.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
 
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                            <img class="img1 product-image" src="../images/article/enfant/img-5.jpg" alt="shirt">
+                            <img class="img2 imgbox" src="../images/article/enfant/img-5.jpg" alt="shirt">
+
+                            <?php 
+                            if(sizeof($_SESSION)>0)
+                            { ?>
+                                <div onclick="addcartitems('Pull 1','28.00',this); nbrachats();" >
+                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                </div>
+
+                                
+                            <?php
+                            }?>               
+                        </div>
+                        <div class="content">
+                            <h4>Pull 1</h4>
+                            <h6><b>$28.00</b></h6>
+                        </div>   
+                    </div>
+                </div>
+
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/enfant/img-6.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/enfant/img-7.jpg" alt="shirt">
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 2','27.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                  
+                        </div>
+                        <div class="content">
+                            <h4>Pull 2</h4>
+                            <h6><b>$27.00</b></h6>
+                        </div>   
+                    </div>
+                </div>   
+                
+            </div>
+            <div class="row">
+                <div class="col-md-3" >
+                    <div class="produit">
+                        <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="../images/article/enfant/img-8.jpg" alt="shirt">
+                                <img class="img2 imgbox" src="../images/article/enfant/img-9.jpg" alt="shirt">
+                                <span class="product-new-label">NOUVEAU</span>
+                                <?php 
+                                if(sizeof($_SESSION)>0)
+                                { ?>
+                                    <div onclick="addcartitems('Pull 3','23.00',this); nbrachats();" >
+                                        <a ><i class="fa fa-shopping-cart"></i></a>     
+                                    </div>
+
+                                   
+                                <?php
+                                }?>                     
+                        </div>
+                        <div class="content">
+                            <h4>Pull 3</h4>
+                            <h6><b>$23.00</b> <s style="color: grey;">$35.00</s></h6>
+                        </div>   
+                    </div>
+                </div>
+
+            </div><br><br>
+
+            <?php 
+            if(sizeof($_SESSION)>0)
+            { ?>            
+            <div class="row" >
+                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->                    
+                    <button class="button" onclick="totalachats(); totalnombre();">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div style="position:absolute;right:25px;top:-8px;"id="nbrachats" > 0</div>
+                    </button>
+                </div>
+            </div>
+            <?php
+            }?>   
+        </div>
+    </div>
+    <input class="d-none" type="text" name="totalprix">
+    <input class="d-none" type="text" name="totalnbr">
+</form>
 
 <!-- -------------------------------------------- article homme END ----------------------------------------------   -->
 
@@ -231,6 +337,32 @@
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
+    var totalprix=0;
+    var totalnbr=0;
+    function addcartitems(clicked_id,clicked_prix,th)
+    {
+        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"<b>&nbsp;&nbsp;&nbsp;&nbsp; Prix: </b> $"+clicked_prix+"'/></li>" ;
+        th.classList.add('d-none');
+        totalprix=totalprix+parseInt(clicked_prix);
+        totalnbr=totalnbr+1;
+        //document.getElementById(clicked_id).classList.add('d-none');
+    }
+
+    function nbrachats()
+    {
+        document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
+    }
+
+    function totalachats()
+    {
+        document.f.totalprix.value=totalprix;
+    }
+
+    function totalnombre()
+    {
+        document.f.totalnbr.value=totalnbr;
+    }
+
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top
