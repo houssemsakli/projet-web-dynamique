@@ -21,9 +21,31 @@
 	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
+    <style>
+    .addbtn{
+        background-color:#343a40;
+        color:white;
+        position:fixed;
+        left:0px;
+        top:200px;
+        width:auto;
+        height:auto;
+        font-size:25px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center ;
+        padding: 3px;
+        transition : .3s;
+    }
+    .addbtn:hover{
+        background-color:white;
+        color: #343a40;
+        cursor:pointer;
+    }
+</style>
 </head>
 
-<body>
+<body onload="articleHeight()">
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
     <header>
         
@@ -121,142 +143,81 @@
 
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
+<?php 
+        if($_SESSION["email"]=="azer@azer.azer")
+        {
+    ?><div class="addbtn" onClick="document.location.href='ajouterArticle.php'">
+        Ajouter <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+    <?php 
+        }
+    ?>
 
 <form name="f" method="post" action="mesachats.php" >
     
-    <div class="new">
+    <div class="new" id ="new" style="height:1x">
         <div class="container "><br><br><br>
             
-            <div class="row">
+
+        <?php  
+        
+            $con = MySQLi_connect("localhost","root","") ;
+            MySQLi_select_db($con,"bincoDb") ;
+
+            $req = "select * from articleEnfants  ";
+            
+            $res = MySQLi_query($con,$req);
+            
+            if (mysqli_num_rows($res) == 0){
+                echo("<div class='alert alert-danger' id='al' >");
+                echo( "Il y'a pas d'aricle ");
+                echo("</div>");
+            }else {
+                $e=mysqli_fetch_array($res);
+                echo'
+                <div class="row">
                 <div class="col-md-12 text-center new-title-style" >Les Articles des Enfants</div>
-            </div><br>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-1.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-2.jpg" alt="shirt">
-                        
-                            <?php 
+                </div><br>
+                ';
+                while($e){
+                    echo '<div class="row star" >';
+                    $compteur = 0 ;
+                    while($e&&$compteur<4)
+                    {
+                        echo '
+                            <div class="col-md-3" >
+                            <div class="produit">
+                                <div class="bg-white rounded"  >
+                                    <img class="img1 product-image" src="data:image/jpeg;base64,'.base64_encode($e['img1']).'" alt="shirt" >
+                                    <img class="img2 imgbox" src="data:image/jpeg;base64,'.base64_encode($e['img2']).'" alt="shirt">
+                                    <span class="product-new-label">NOUVEAU</span>
+
+                                ' ;
                             if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pyjama 1','35.00',this); nbrachats();">
+                            {
+                                echo '
+                                <div onclick=addcartitems("'.$e['nom'].'","'.$e['prix'].'",this);nbrachats(); >
                                     <a ><i class="fa fa-shopping-cart"></i></a>     
                                 </div>
-
-                                <ul class="d-none" name="cartitems" id="cartitems">
-                                </ul>
-                                
-                            <?php
-                            }?>                   
-                        </div>
-                        <div class="content">
-                            <h4>Pyjama 1</h4>
-                            <h6><b>$35.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-                    
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-3.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-4.jpg" alt="shirt">
-                            <span class="product-new-label">NOUVEAU</span>
-
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pyjama 2','31.00',this); nbrachats();" >
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
+                                ';
+                            }        
+                        echo '   </div>
+                                    <div class="content">
+                                        <h4>'.$e['nom'].'</h4>
+                                        <h6><b>$'.$e['prix'].'</b> <s style="color: grey;">$42.00</s></h6>
+                                    </div>   
                                 </div>
-
-                                
-                            <?php
-                            }?>               
-                        </div>
-                        <div class="content">
-                            <h4>Pyjama 2</h4>
-                            <h6><b>$31.00</b> <s style="color: grey;">$42.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/enfant/img-5.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/enfant/img-5.jpg" alt="shirt">
-
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Pull 1','28.00',this); nbrachats();" >
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                
-                            <?php
-                            }?>               
-                        </div>
-                        <div class="content">
-                            <h4>Pull 1</h4>
-                            <h6><b>$28.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/enfant/img-6.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/enfant/img-7.jpg" alt="shirt">
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Pull 2','27.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                  
-                        </div>
-                        <div class="content">
-                            <h4>Pull 2</h4>
-                            <h6><b>$27.00</b></h6>
-                        </div>   
-                    </div>
-                </div>   
+                            </div>
+                        ';
+                        $e=mysqli_fetch_array($res);
+                        $compteur ++;
+                    }echo '</div>' ; 
                 
-            </div>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/enfant/img-8.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/enfant/img-9.jpg" alt="shirt">
-                                <span class="product-new-label">NOUVEAU</span>
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Pull 3','23.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>Pull 3</h4>
-                            <h6><b>$23.00</b> <s style="color: grey;">$35.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-            </div><br><br>
+                }
+            }
+        ?>  
+            
+  <br><br>
 
             <?php 
             if(sizeof($_SESSION)>0)
@@ -273,6 +234,8 @@
             }?>   
         </div>
     </div>
+    <ul class="d-none" name="cartitems" id="cartitems">
+    </ul>
     <input class="d-none" type="text" name="totalprix">
     <input class="d-none" type="text" name="totalnbr">
 </form>
@@ -361,6 +324,22 @@
     function totalnombre()
     {
         document.f.totalnbr.value=totalnbr;
+    }
+
+    function increaseHeight()
+    {
+        x = parseInt(document.getElementById("new").style.height)+400;
+        document.getElementById("new").style.height = x.toString()+"px";
+    }
+    function articleHeight()
+    {
+        var i=0;
+        while(i<=document.querySelectorAll('.star').length)
+        {
+            i++;
+            increaseHeight();
+        }
+            
     }
 
     $('.cont').click(function() {

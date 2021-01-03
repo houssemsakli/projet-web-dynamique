@@ -86,12 +86,12 @@
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
-<div style="height: 600px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
+<div style="height: 650px;padding-top: 0px;background-color: rgb(230,230,230);"  id="f">
 	<div class="container "  ><br><br>
 		<div class="row">
 			<div class="col-md-12 text-center nouv-title-style form-title-style" >Mes Commandes</div> 
 		</div><br>
-            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 230px; position: relative;">
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="width: 500px; height : 250px; position: relative;">
                 <div class="container">
                     <div class=" space " ></div>
                         <?php 

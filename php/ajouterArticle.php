@@ -1,51 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Articles [Femme]</title>
+	<title>Ajouter </title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="icon" href="../images/favicon.png">
-
+  
     <script src="../js/jquery-3.2.1.slim.min.js" ></script><!-- BOOTSTRAP -->
-    <script src="../js/popper.min.js" ></script><!-- BOOTSTRAP -->
-	<script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
+    <script src="../s/popper.min.js" ></script><!-- BOOTSTRAP -->  
+    <script src="../js/bootstrap.min.js" ></script><!-- BOOTSTRAP -->
     <script src="../js/jquery-3.5.1.min.js" ></script><!-- JQUERY -->
-
+	
 	<link rel="stylesheet" href="../css/bootstrap.min.css"><!-- BOOTSTRAP -->
 
-
+	
 	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
 
 
 	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-    <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
-    <style>
-    .addbtn{
-        background-color:#343a40;
-        color:white;
-        position:fixed;
-        left:0px;
-        top:200px;
-        width:auto;
-        height:auto;
-        font-size:25px;
-        border-bottom-right-radius: 8px;
-        border-top-right-radius: 8px;
-        text-align: center ;
-        padding: 3px;
-        transition : .3s;
-    }
-    .addbtn:hover{
-        background-color:white;
-        color: #343a40;
-        cursor:pointer;
-    }
-</style>
+    <link rel="stylesheet" href="../css/style.css" type="text/css"> 
+    <link rel="stylesheet" href="../css/connexioninscri_style.css" type="text/css"> 
 </head>
-<body onload="articleHeight()">
-<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
+
+<body onload="increaseHeight()">
+	<!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
     <header>
         
         <div class="fixed-top shadow  mb-5  rounded">
@@ -136,111 +115,81 @@
     </header>
 	<!-- -------------------------------------------- NAVBAR END ----------------------------------------------   -->
 
+	
+	
+<!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
+<div class="formsection" id="formsection" style="height: 650px">
+	<div class="container ">
+		<div class="row">
+			<div class="col-md-12 text-center nouv-title-style form-title-style" >Ajouter un article</div> 
+		</div><br>
+            <div class="center text-center box-connexion shadow p-3 mb-5 bg-white rounded " id="box-connexion" style="height : 380px;">
+                <div class="container">
+                    <div class="space"></div>
+                    
+<?php 
+    $con = MySQLi_connect("localhost","root","") ;
+    MySQLi_select_db($con,"bincoDb") ;
 
 
-<!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
-    <?php 
-        if($_SESSION["email"]=="azer@azer.azer")
-        {
-    ?><div class="addbtn" onClick="document.location.href='ajouterArticle.php'">
-        Ajouter <i class="fa fa-plus" aria-hidden="true"></i>
-    </div>
-    <?php 
-        }
-    ?>
-
-<form name="f" method="post" action="mesachats.php" >
-    
-    <div class="new" id ="new" style="height:600px">
-        <div class="container "><br><br><br>
-            
-            
-        <?php  
-        
+    if(isset($_POST["prix"]))
+    {
         $con = MySQLi_connect("localhost","root","") ;
         MySQLi_select_db($con,"bincoDb") ;
 
-        $req = "select * from articleFemme  ";
+  
+        $image1 = addslashes(file_get_contents($_FILES['image1']['tmp_name']));
+        //$image1 = base64_encode(file_get_contents(addslashes($_FILES['image1']['tmp_name'])));
+        $image2 = addslashes(file_get_contents($_FILES['image2']['tmp_name']));
+        $nom = $_POST['nom'];
+        $prix = $_POST['prix'];
+        $type = $_POST['type'];
+        if($type=='e')
+            $req = "insert into articleEnfants values ('$image1','$image2','$nom','$prix')";
+        else if($type=='f')
+            $req = "insert into articleFemme values ('$image1','$image2','$nom','$prix')";
+        else if($type=='h')
+            $req = "insert into articleHomme values ('$image1','$image2','$nom','$prix')";
+        MySQLi_query($con,$req);
         
-        $res = MySQLi_query($con,$req);
-        
-        if (mysqli_num_rows($res) == 0){
-            echo("<div class='alert alert-danger' id='al' >");
-            echo( "Il y'a pas d'aricle ");
-            echo("</div>");
-        }else {
-            $e=mysqli_fetch_array($res);
-            echo'
-            <div class="row">
-            <div class="col-md-12 text-center new-title-style" >Les Articles des Femmes</div>
-            </div><br>
-            ';
-            while($e){
-                echo '<div class="row star" >';
-                $compteur = 0 ;
-                while($e&&$compteur<4)
-                {
-                    echo '
-                        <div class="col-md-3" >
-                        <div class="produit">
-                            <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="data:image/jpeg;base64,'.base64_encode($e['img1']).'" alt="shirt" >
-                                <img class="img2 imgbox" src="data:image/jpeg;base64,'.base64_encode($e['img2']).'" alt="shirt">
-                                <span class="product-new-label">NOUVEAU</span>
-
-                            ' ;
-                        if(sizeof($_SESSION)>0)
-                        {
-                            echo '
-                            <div onclick=addcartitems("'.$e['nom'].'","'.$e['prix'].'",this);nbrachats(); >
-                                <a ><i class="fa fa-shopping-cart"></i></a>     
-                            </div>
-                            ';
-                        }        
-                    echo '   </div>
-                                <div class="content">
-                                    <h4>'.$e['nom'].'</h4>
-                                    <h6><b>$'.$e['prix'].'</b> <s style="color: grey;">$42.00</s></h6>
-                                </div>   
-                            </div>
-                        </div>
-                    ';
-                    $e=mysqli_fetch_array($res);
-                    $compteur ++;
-                }echo '</div>' ; 
+        if (mysqli_affected_rows($con)<0){
+            echo('<div style="margin-top: 50%;"><div class="alert alert-danger" >ERREUR</div>');
             
-            }
+        }else{
+            echo( '<div class="alert alert-success" style="margin-top: 25%;">Article  ajoutée avec succès</div>');
+            echo('<button onclick="window.location.href=`http://localhost/p/php/ajouterArticle.php`;" class="btn btn-outline-dark btn-lg btn-block">Revenir</button></div>');
         }
-    ?>  
+    }else{
+?>
+                    
+                    <form action="ajouterArticle.php" enctype="multipart/form-data" method="post" class="form-group" name="f" >
+                        <div class="space"></div>
+                        <div class="alert alert-danger d-none" id="ernom">Le nom est invalide</div>
+                        <div class="alert alert-danger d-none" id="erprix">Le prix est invalide</div>
+                        <input type="file"  name="image1" class="form-control "  id="image1"><br>
+                        <input type="file"  name="image2"  class="form-control " id="image2"><br>
+                        <input type="text" placeholder="nom de l'article" name="nom" onblur="VerifNom();verifGlobal()" class="form-control " id="nom"><br>
+                        <input type="number" placeholder="prix" name="prix" class="form-control " onblur="verifPrix();verifGlobal()" id="prix">
+                        <br><div class="form-control">
+                            <input type="radio"  name="type" value="h" id="hom"> <label for="hom">Homme</label>  
+                            <input type="radio" name="type" value="f" id="fem"> <label for="fem">Femme</label> 
+                            <input type="radio"name="type" value="e" id="enf"> <label for="enf">Enfant</label> 
+                        </div>
+                        
+                        <br>
+                        <input class="btn-submit" id="sub" disabled type="submit" value="Ajouter" style="background-color:grey;border-color:grey">
+                    </form>
 
-            <br><br>
-
-            <?php 
-            if(sizeof($_SESSION)>0)
-            { ?>            
-            <div class="row" >
-                <div class="col-md-12 text-center" style="background-color:white"> <!-- kont mech naamel el bouton ele yab3eth el items lil cart  -->                    
-                    <button class="button" onclick="totalachats(); totalnombre();">
-                        <i class="fa fa-shopping-cart"></i>
-                        <div style="position:absolute;right:25px;top:-8px;"id="nbrachats" > 0</div>
-                    </button>
+    <?php 
+    }
+    ?>
                 </div>
             </div>
-            <?php
-            }?>   
-        </div>
-    </div>
-    <ul class="d-none" name="cartitems" id="cartitems">
-    </ul>
-    <input class="d-none" type="text" name="totalprix">
-    <input class="d-none" type="text" name="totalnbr">
-</form>
-<!-- -------------------------------------------- article FEMME END ----------------------------------------------   -->
-
-
+	</div>
+</div>
+<!-- -------------------------------------------- Form END ----------------------------------------------   -->
 <!-- -------------------------------------------- FOOTER BEGIN ----------------------------------------------   -->
-<footer  >
+<footer >
     <div class="topsidefooter container">
         <div class="row">
             <div  class="col-lg-4">
@@ -286,59 +235,103 @@
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div>		
         </div>
     </div>
     <div class="Copyright ">
-        <span class="redcolor">B I N C O</span> <br> © Copyright 2021
+        <span class="redcolor">B I N C O</span> <br> © Copyright 2021 
     </div>
     <a id="contactref"></a>
 </footer>
 <!-- -------------------------------------------- FOOTER END ----------------------------------------------   -->
 <script>
-    var totalprix=0;
-    var totalnbr=0;
-    function addcartitems(clicked_id,clicked_prix,th)
-    {
-        document.getElementById('cartitems').innerHTML = document.getElementById('cartitems').innerHTML + "<li > <input type='hidden' name='cartitems[]' value='"+clicked_id+"<b>&nbsp;&nbsp;&nbsp;&nbsp; Prix: </b> $"+clicked_prix+"'/></li>" ;
-        th.classList.add('d-none');
-        totalprix=totalprix+parseInt(clicked_prix);
-        totalnbr=totalnbr+1;
-        //document.getElementById(clicked_id).classList.add('d-none');
-    }
-
-    function nbrachats()
-    {
-        document.getElementById('nbrachats').innerHTML = parseInt(document.getElementById('nbrachats').innerHTML)+1;
-    }
-
-    function totalachats()
-    {
-        document.f.totalprix.value=totalprix;
-    }
-
-    function totalnombre()
-    {
-        document.f.totalnbr.value=totalnbr;
-    }
-
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("new").style.height)+300;
-        document.getElementById("new").style.height = x.toString()+"px";
+        x = parseInt(document.getElementById("box-connexion").style.height)+80;
+        document.getElementById("box-connexion").style.height = x.toString()+"px";
+        x = parseInt(document.getElementById("formsection").style.height)+80;
+        document.getElementById("formsection").style.height = x.toString()+"px";
+        
     }
-    function articleHeight()
+    function decreaseHeight()
     {
-        var i=1;
-        while(i<=document.querySelectorAll('.star').length)
-        {
-            i++;
-            increaseHeight();
-        }
-            
+        x = parseInt(document.getElementById("box-connexion").style.height)-80;
+        document.getElementById("box-connexion").style.height = x.toString()+"px";
+        x = parseInt(document.getElementById("formsection").style.height)-80;
+        document.getElementById("formsection").style.height = x.toString()+"px";
     }
 
+    function verifNomPrenom(ch)
+    {
+        var i=0;
+        var ok=0;
+        while(i<ch.length)
+        {
+            if((ch[i].toUpperCase()<'A'||ch[i].toUpperCase()>'Z')&&(ch[i]<'0'||ch[i]>'9'))
+                return false ; 
+            i++;
+        };
+        return true;
+    }
+    function VerifNom()
+    {
+        var nom=document.getElementById("nom").value;
+        if((!verifNomPrenom(nom)||nom.length==0)&&(document.getElementById("ernom").classList.contains("d-none")==true))
+        {
+            document.getElementById("ernom").classList.remove('d-none');
+            increaseHeight();
+
+        }else if((verifNomPrenom(nom)&&nom.length>0)&&(document.getElementById("ernom").classList.contains("d-none")==false)){
+            document.getElementById("ernom").classList.add('d-none');
+            decreaseHeight();
+        }
+    }
+
+    function verifPrix()
+    {
+        if(((parseInt(document.f.prix.value))<0||document.f.prix.value=="")&&(document.getElementById("erprix").classList.contains("d-none")==true))
+        {
+            document.getElementById("erprix").classList.remove('d-none');
+            increaseHeight();
+        }else if(((parseInt(document.f.prix.value))>=0)&&document.f.prix.value.length>0&&(document.getElementById("erprix").classList.contains("d-none")==false)){
+          
+            document.getElementById("erprix").classList.add('d-none');
+            decreaseHeight();
+        }
+    }
+    function disableSubmit()
+    {
+        document.getElementById("sub").disabled = true ; 
+        document.getElementById("sub").style.backgroundColor = "grey";
+        document.getElementById("sub").style.border = "grey";
+    }
+    function enableSubmit()
+    {
+        document.getElementById("sub").disabled = false ; 
+        document.getElementById("sub").style.backgroundColor = "#BE3144";
+        document.getElementById("sub").style.border = "#BE3144";
+    }
+
+    function verifGlobal(){
+        var mdp=document.getElementById("nom").value;
+        var mdp2=document.getElementById("prix").value;
+
+
+    //verification nom et prenom 
+        if(!verifNomPrenom(nom))
+        {
+            disableSubmit();
+            return false;
+        }
+
+        if((parseInt(document.f.prix.value))<0||document.f.prix.value=="")
+        {
+            disableSubmit();
+            return false;
+        }	
+        enableSubmit();
+    }
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top

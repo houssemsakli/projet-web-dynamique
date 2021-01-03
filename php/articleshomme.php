@@ -21,9 +21,31 @@
 	<script src="../js/ea5c09adf8.js" ></script><!-- FONT AWESOME-->
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/articles_style.css" type="text/css">
+    <style>
+    .addbtn{
+        background-color:#343a40;
+        color:white;
+        position:fixed;
+        left:0px;
+        top:200px;
+        width:auto;
+        height:auto;
+        font-size:25px;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        text-align: center ;
+        padding: 3px;
+        transition : .3s;
+    }
+    .addbtn:hover{
+        background-color:white;
+        color: #343a40;
+        cursor:pointer;
+    }
+</style>
 </head>
 
-<body>
+<body onload="articleHeight()">
 <!-- -------------------------------------------- NAVBAR BEGIN ----------------------------------------------   -->
     <header>
         
@@ -118,210 +140,80 @@
 
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
-
+<?php 
+        if($_SESSION["email"]=="azer@azer.azer")
+        {
+    ?><div class="addbtn" onClick="document.location.href='ajouterArticle.php'">
+        Ajouter <i class="fa fa-plus" aria-hidden="true"></i>
+    </div>
+    <?php 
+        }
+    ?>
 <form name="f" method="post" action="mesachats.php" >
     
-    <div class="new">
+    <div class="new" id ="new" style="height:1px">
         <div class="container "><br><br><br>
             
+
+
+        <?php  
+        
+        $con = MySQLi_connect("localhost","root","") ;
+        MySQLi_select_db($con,"bincoDb") ;
+
+        $req = "select * from articleHomme  ";
+        
+        $res = MySQLi_query($con,$req);
+        
+        if (mysqli_num_rows($res) == 0){
+            echo("<div class='alert alert-danger' id='al' >");
+            echo( "Il y'a pas d'aricle ");
+            echo("</div>");
+        }else {
+            $e=mysqli_fetch_array($res);
+            echo'
             <div class="row">
-                <div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
+            <div class="col-md-12 text-center new-title-style" >Les Articles des Hommes</div>
             </div><br>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-11.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-12.jpg" alt="shirt">
-                        
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('Veste 1','51.00',this); nbrachats();">
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                <ul class="d-none" name="cartitems" id="cartitems">
-                                </ul>
-                                
-                            <?php
-                            }?>                   
-                        </div>
-                        <div class="content">
-                            <h4>Veste 1</h4>
-                            <h6><b>$51.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-                    
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                            <img class="img1 product-image" src="../images/article/homme/img-3.jpg" alt="shirt">
-                            <img class="img2 imgbox" src="../images/article/homme/img-4.jpg" alt="shirt">
-                            <span class="product-new-label">NOUVEAU</span>
-
-                            <?php 
-                            if(sizeof($_SESSION)>0)
-                            { ?>
-                                <div onclick="addcartitems('T-Shirt 1','63.00',this); nbrachats();" >
-                                    <a ><i class="fa fa-shopping-cart"></i></a>     
-                                </div>
-
-                                
-                            <?php
-                            }?>               
-                        </div>
-                        <div class="content">
-                            <h4>T-Shirt 1</h4>
-                            <h6><b>$63.00</b> <s style="color: grey;">$75.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-15.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-16.jpg" alt="shirt">
-                            
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('T-Shirt 2','53.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                    
-                                <?php
-                                }?>               
-                        </div>
-                        <div class="content">
-                            <h4>T-Shirt 2</h4>
-                            <h6><b>$53.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-23.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-24.jpg" alt="shirt">
+            ';
+            while($e){
+                echo '<div class="row star">';
+                $compteur = 0 ;
+                while($e&&$compteur<4)
+                {
+                    echo '
+                        <div class="col-md-3" >
+                        <div class="produit">
+                            <div class="bg-white rounded"  >
+                                <img class="img1 product-image" src="data:image/jpeg;base64,'.base64_encode($e['img1']).'" alt="shirt" >
+                                <img class="img2 imgbox" src="data:image/jpeg;base64,'.base64_encode($e['img2']).'" alt="shirt">
                                 <span class="product-new-label">NOUVEAU</span>
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Veste 2','57.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
 
-                                   
-                                <?php
-                                }?>                  
+                            ' ;
+                        if(sizeof($_SESSION)>0)
+                        {
+                            echo '
+                            <div onclick=addcartitems("'.$e['nom'].'","'.$e['prix'].'",this);nbrachats(); >
+                                <a ><i class="fa fa-shopping-cart"></i></a>     
+                            </div>
+                            ';
+                        }        
+                    echo '   </div>
+                                <div class="content">
+                                    <h4>'.$e['nom'].'</h4>
+                                    <h6><b>$'.$e['prix'].'</b> <s style="color: grey;">$42.00</s></h6>
+                                </div>   
+                            </div>
                         </div>
-                        <div class="content">
-                            <h4>Veste 2</h4>
-                            <h6><b>$57.00</b> <s style="color: grey;">$63.00</s></h6>
-                        </div>   
-                    </div>
-                </div>   
-                
-            </div>
-            <div class="row">
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-25.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-26.jpg" alt="shirt">
-                                <span class="product-new-label">NOUVEAU</span>
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Veste 3','70.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>Veste 3</h4>
-                            <h6><b>$70.00</b> <s style="color: grey;">$82.00</s></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-111.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-211.jpg" alt="shirt">
-                            
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('Veste 4','59.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-
-                                   
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>Veste 4</h4>
-                            <h6><b>$59.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-300.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-400.jpg" alt="shirt">
-                            
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('T-Shirt 3','62.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>T-Shirt 3</h4>
-                            <h6><b>$62.00</b></h6>
-                        </div>   
-                    </div>
-                </div>
-
-                <div class="col-md-3" >
-                    <div class="produit">
-                        <div class="bg-white rounded"  >
-                                <img class="img1 product-image" src="../images/article/homme/img-7.jpg" alt="shirt">
-                                <img class="img2 imgbox" src="../images/article/homme/img-8.jpg" alt="shirt">
-                            
-                                <?php 
-                                if(sizeof($_SESSION)>0)
-                                { ?>
-                                    <div onclick="addcartitems('T-Shirt 4','69.00',this); nbrachats();" >
-                                        <a ><i class="fa fa-shopping-cart"></i></a>     
-                                    </div>
-                                <?php
-                                }?>                     
-                        </div>
-                        <div class="content">
-                            <h4>T-Shirt 4</h4>
-                            <h6><b>$69.00</b></h6>
-                        </div>   
-                    </div>
-                </div>       
-
-            </div><br><br>
+                    ';
+                    $e=mysqli_fetch_array($res);
+                    $compteur ++;
+                }echo '</div>' ; 
+            
+            }
+        }
+    ?> 
+            <br><br>
 
             <?php 
             if(sizeof($_SESSION)>0)
@@ -338,6 +230,8 @@
             }?>   
         </div>
     </div>
+    <ul class="d-none" name="cartitems" id="cartitems">
+    </ul>
     <input class="d-none" type="text" name="totalprix">
     <input class="d-none" type="text" name="totalnbr">
 </form>
@@ -426,6 +320,22 @@
         document.f.totalnbr.value=totalnbr;
     }
 
+
+    function increaseHeight()
+    {
+        x = parseInt(document.getElementById("new").style.height)+450;
+        document.getElementById("new").style.height = x.toString()+"px";
+    }
+    function articleHeight()
+    {
+        var i=0;
+        while(i<=document.querySelectorAll('.star').length)
+        {
+            i++;
+            increaseHeight();
+        }
+            
+    }
     $('.cont').click(function() {
         $('html,body').animate({
             scrollTop : $('#contactref').offset().top
