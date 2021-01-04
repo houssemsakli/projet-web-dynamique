@@ -144,7 +144,7 @@
 
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 <?php 
-        if($_SESSION["email"]=="azer@azer.azer")
+        if($_SESSION["email"]=="admin@admin.com")
         {
     ?><div class="addbtn" onClick="document.location.href='ajouterArticle.php'">
         Ajouter <i class="fa fa-plus" aria-hidden="true"></i>
@@ -155,7 +155,7 @@
 
 <form name="f" method="post" action="mesachats.php" >
     
-    <div class="new" id ="new" style="height:1x">
+    <div class="new" id ="new" style="height:600px">
         <div class="container "><br><br><br>
             
 
@@ -170,7 +170,7 @@
             
             if (mysqli_num_rows($res) == 0){
                 echo("<div class='alert alert-danger' id='al' >");
-                echo( "Il y'a pas d'aricle ");
+                echo( "Il n'y a pas d'articles");
                 echo("</div>");
             }else {
                 $e=mysqli_fetch_array($res);
@@ -204,7 +204,7 @@
                         echo '   </div>
                                     <div class="content">
                                         <h4>'.$e['nom'].'</h4>
-                                        <h6><b>$'.$e['prix'].'</b> <s style="color: grey;">$42.00</s></h6>
+                                        <h6><b>$'.$e['prix'].'</b></h6>
                                     </div>   
                                 </div>
                             </div>
@@ -328,12 +328,12 @@
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("new").style.height)+400;
+        x = parseInt(document.getElementById("new").style.height)+360;
         document.getElementById("new").style.height = x.toString()+"px";
     }
     function articleHeight()
     {
-        var i=0;
+        var i=1;
         while(i<=document.querySelectorAll('.star').length)
         {
             i++;

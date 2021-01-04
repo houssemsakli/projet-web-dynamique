@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ajouter </title>
+	<title>Ajout d'articles</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"> 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -118,6 +118,7 @@
 	
 	
 <!-- -------------------------------------------- Form BEGIN ----------------------------------------------   -->
+<br>
 <div class="formsection" id="formsection" style="height: 650px">
 	<div class="container ">
 		<div class="row">
@@ -156,7 +157,7 @@
             echo('<div style="margin-top: 50%;"><div class="alert alert-danger" >ERREUR</div>');
             
         }else{
-            echo( '<div class="alert alert-success" style="margin-top: 25%;">Article  ajoutée avec succès</div>');
+            echo( '<div class="alert alert-success" style="margin-top: 25%;">Article ajouté avec succès</div>');
             echo('<button onclick="window.location.href=`http://localhost/p/php/ajouterArticle.php`;" class="btn btn-outline-dark btn-lg btn-block">Revenir</button></div>');
         }
     }else{
@@ -168,8 +169,8 @@
                         <div class="alert alert-danger d-none" id="erprix">Le prix est invalide</div>
                         <input type="file"  name="image1" class="form-control "  id="image1"><br>
                         <input type="file"  name="image2"  class="form-control " id="image2"><br>
-                        <input type="text" placeholder="nom de l'article" name="nom" onblur="VerifNom();verifGlobal()" class="form-control " id="nom"><br>
-                        <input type="number" placeholder="prix" name="prix" class="form-control " onblur="verifPrix();verifGlobal()" id="prix">
+                        <input type="text" placeholder="Nom d'article" name="nom" onblur="VerifNom();verifGlobal()" class="form-control " id="nom"><br>
+                        <input type="number" placeholder="Prix" name="prix" class="form-control " onblur="verifPrix();verifGlobal()" id="prix">
                         <br><div class="form-control">
                             <input type="radio"  name="type" value="h" id="hom"> <label for="hom">Homme</label>  
                             <input type="radio" name="type" value="f" id="fem"> <label for="fem">Femme</label> 
@@ -268,7 +269,7 @@
         var ok=0;
         while(i<ch.length)
         {
-            if((ch[i].toUpperCase()<'A'||ch[i].toUpperCase()>'Z')&&(ch[i]<'0'||ch[i]>'9'))
+            if((ch[i].toUpperCase()<'A'||ch[i].toUpperCase()>'Z')&&(ch[i]<'0'||ch[i]>'9')&&(ch[i]!='-')&&(ch[i]!=' '))
                 return false ; 
             i++;
         };

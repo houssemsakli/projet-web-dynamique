@@ -141,7 +141,7 @@
 <!-- -------------------------------------------- article homme BEGIN ----------------------------------------------   -->
 
     <?php 
-        if($_SESSION["email"]=="azer@azer.azer")
+        if($_SESSION["email"]=="admin@admin.com")
         {
     ?><div class="addbtn" onClick="document.location.href='ajouterArticle.php'">
         Ajouter <i class="fa fa-plus" aria-hidden="true"></i>
@@ -167,7 +167,7 @@
         
         if (mysqli_num_rows($res) == 0){
             echo("<div class='alert alert-danger' id='al' >");
-            echo( "Il y'a pas d'aricle ");
+            echo( "Il n'y a pas d'articles");
             echo("</div>");
         }else {
             $e=mysqli_fetch_array($res);
@@ -187,7 +187,7 @@
                             <div class="bg-white rounded"  >
                                 <img class="img1 product-image" src="data:image/jpeg;base64,'.base64_encode($e['img1']).'" alt="shirt" >
                                 <img class="img2 imgbox" src="data:image/jpeg;base64,'.base64_encode($e['img2']).'" alt="shirt">
-                                <span class="product-new-label">NOUVEAU</span>
+                                <span class="product-new-label">PROMOTION</span>
 
                             ' ;
                         if(sizeof($_SESSION)>0)
@@ -325,7 +325,7 @@
 
     function increaseHeight()
     {
-        x = parseInt(document.getElementById("new").style.height)+300;
+        x = parseInt(document.getElementById("new").style.height)+360;
         document.getElementById("new").style.height = x.toString()+"px";
     }
     function articleHeight()

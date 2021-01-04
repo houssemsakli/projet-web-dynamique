@@ -150,11 +150,9 @@
 			<div class="col-md-12 text-center nouv-title-style " >Zoom sur les nouveautés</div> 
 		</div><br><br>
 		<div class="row">
-			<div class="col-md-4 animboxnouv" >
-				 <div class="box text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, nisi sunt. Eum perferendis facere quidem, aperiam architecto reiciendis et nostrum quos, tempore id laudantium, beatae error possimus doloremque dolorem eveniet.</div>
-			</div> 
-			<div class="col-md-4 animboxnouv" ><div class="box text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda autem eaque rem reiciendis debitis excepturi? Consequuntur quidem fuga officia excepturi, natus qui voluptatibus quo tempore non vitae id vel ducimus.</div> </div> 
-			<div class="col-md-4 animboxnouv" ><div class="box text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, molestiae dolorem quo illum incidunt nobis rerum! Minima maxime tempora modi sit, quam, sint praesentium fuga harum architecto nihil nemo alias!</div> </div> 
+			<div class="col-md-4 animboxnouv" ><div class="box text-center"><be><br><br><br><br>Attendez la nouvelle collection d'Hiver Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum!</div> </div> 
+			<div class="col-md-4 animboxnouv" ><div class="box text-center"><be><br><br><br><br>Une nouvelle collection de Pyjamas pour les femmes va être disponible bientôt Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum!</div> </div> 
+			<div class="col-md-4 animboxnouv" ><div class="box text-center"><be><br><br><br><br>Ne manquez pas la nouvelle veste blue d'hommes ! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum!</div> </div> 
 		</div>
 	</div>
 </div>
@@ -166,9 +164,9 @@
 			<div class="col-md-12 text-center nouv-title-stylepromo" >Zoom sur les promotions</div> 
 		</div><br><br>
 		<div class="row">
-			<div class="col-md-4 animbox"><div class="boxpromo text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div> </div>
-			<div class="col-md-4 animbox"> <div class="boxpromo text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div></div>
-			<div class="col-md-4 animbox"> <div class="boxpromo text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div></div> 
+			<div class="col-md-4 animbox"><div class="boxpromo text-center"><be><br><br><br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div> </div>
+			<div class="col-md-4 animbox"> <div class="boxpromo text-center"><be><br><br><br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div></div>
+			<div class="col-md-4 animbox"> <div class="boxpromo text-center"><be><br><br><br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur aperiam mollitia asperiores enim voluptas soluta. Vero nam nisi obcaecati provident officia neque accusantium, reprehenderit veniam praesentium. Delectus veniam pariatur dolorum! </div></div> 
 		</div>
 	</div>
 </div>
