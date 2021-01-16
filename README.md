@@ -11,7 +11,7 @@
 
 3) Also, when you create these tables, the pages "Articles Homme", "Articles Femme" and "Articles Enfants" wont contain any articles ! You have to add articles in the database.
 You can add articles in the "php/ajouterArticle.php" page.
-NOTE: Normaly you will need to create a new account with the address "admin@admin.com" and connect with this address so that a bouton "Ajouter" will show up in the "Articles Homme", "Articles Femme" and "Articles Enfants" pages but you can just go the "php/ajouterArticle.php" page directly.
+NOTE: Normaly you will need to create a new account with the address "admin@admin.com" and connect with this address so that a bouton "Ajouter" will show up in the "Articles Homme", "Articles Femme" and "Articles Enfants" pages but you can also go to "php/ajouterArticle.php" page directly instead.
 4) Make sure SQL and PHP services are running before testing the website.
 5) The website should look similar to the screenshots provided in the "screenshots" folder.
 
